@@ -1,8 +1,8 @@
 # Site settings
 title: Ekaksh Goyal - Portfolio
 description: Personal portfolio website
-baseurl: "/Users/ekakshgoyal/Documents/GitHub/Ekaksh-Portfolio/Ekaksh-Portfolio"
-url: "https://ekaksh0005.github.io/Ekaksh-Portfolio/"
+baseurl: Ekaksh-Portfolio  # Just the repository name
+url: "https://ekaksh0005.github.io"  # No trailing slash
 
 # Build settings
 markdown: kramdown
