@@ -1,0 +1,40 @@
+# Site settings
+title: Ekaksh Goyal - Portfolio
+description: Personal portfolio website
+baseurl: "" # Empty if your site is at the root (not in a subdirectory)
+url: "https://ekaksh0005.github.io/Ekaksh-Portfolio/"
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: assets/css
+  style: compressed
+  
+# Directory settings
+source: .
+destination: _site
+layouts_dir: _layouts
+includes_dir: _includes
+
+# Include/Exclude files and directories
+include:
+  - assets
+  - images
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+
+# Collections
+collections:
+  projects:
+    output: true
+  experiences:
+    output: true
+    
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
