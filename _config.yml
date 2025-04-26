@@ -1,7 +1,7 @@
 # Site settings
 title: Ekaksh Goyal - Portfolio
 description: Personal portfolio website
-baseurl: Ekaksh-Portfolio  # Just the repository name
+baseurl: "/Ekaksh-Portfolio"  # Need to have the forward slash
 url: "https://ekaksh0005.github.io"  # No trailing slash
 
 # Build settings
