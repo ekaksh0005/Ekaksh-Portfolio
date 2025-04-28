@@ -209,3 +209,14 @@ window.addEventListener('resize', () => {
     canvas.height = document.querySelector('header').offsetHeight;
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const typingElement = document.querySelector('.typing-effect');
+    
+    if (typingElement) {
+      setTimeout(() => {
+        typingElement.classList.remove('typing-effect');
+        typingElement.classList.add('typing-done');
+      }, 3500); // after 3.5s
+    }
+  });
