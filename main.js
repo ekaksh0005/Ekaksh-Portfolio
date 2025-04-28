@@ -220,3 +220,56 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 3500); // after 3.5s
     }
   });
+
+  // Add this to your main.js file
+
+// Mobile Navigation
+function setupMobileNav() {
+    // Create the menu toggle button
+    const mobileNavToggle = document.createElement('button');
+    mobileNavToggle.className = 'mobile-nav-toggle';
+    mobileNavToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    document.body.appendChild(mobileNavToggle);
+    
+    // Create overlay for mobile menu
+    const navOverlay = document.createElement('div');
+    navOverlay.className = 'nav-overlay';
+    document.body.appendChild(navOverlay);
+    
+    // Get the navbar
+    const navbar = document.getElementById('navbar');
+    
+    // Toggle mobile navigation
+    function toggleMobileNav() {
+      navbar.classList.toggle('active');
+      navOverlay.classList.toggle('active');
+      
+      // Change icon based on menu state
+      if (navbar.classList.contains('active')) {
+        mobileNavToggle.innerHTML = '<i class="fas fa-times"></i>';
+      } else {
+        mobileNavToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+    }
+    
+    // Event listeners
+    mobileNavToggle.addEventListener('click', toggleMobileNav);
+    navOverlay.addEventListener('click', toggleMobileNav);
+    
+    // Close mobile nav when clicking a link
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navbar.classList.contains('active')) {
+          toggleMobileNav();
+        }
+      });
+    });
+  }
+  
+  // Call this function when the DOM is loaded
+  window.addEventListener('DOMContentLoaded', () => {
+    // Your existing DOMContentLoaded code...
+    
+    // Add mobile navigation setup
+    setupMobileNav();
+  });
