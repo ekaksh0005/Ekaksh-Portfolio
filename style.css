@@ -840,3 +840,181 @@ body.light-mode .mobile-nav-toggle {
   input:checked + .slider:before {
     transform: translateX(26px);
   }
+
+  /* Light Mode Enhancements */
+body.light-mode {
+  /* Improved color palette */
+  --primary-color: #ffffff;
+  --secondary-color: #f8f9fa;
+  --tertiary-color: #e9ecef;
+  --accent-color: #4361ee;  /* More vibrant blue accent */
+  --text-color: #212529;
+  --background: linear-gradient(135deg, #ffffff, #f8f9fa, #e9ecef);
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.85);
+}
+
+/* Enhanced card backgrounds for light mode */
+body.light-mode .experience-item, 
+body.light-mode .education-item, 
+body.light-mode .project-item, 
+body.light-mode .skill-item, 
+body.light-mode .publication-item, 
+body.light-mode .leadership-item, 
+body.light-mode .qualification-item,
+body.light-mode .contact-form {
+  background: var(--card-bg);
+  box-shadow: 0 8px 25px var(--shadow-color);
+  border-left: 4px solid var(--accent-color);
+}
+
+/* Improved hover effects for light mode */
+body.light-mode .experience-item:hover, 
+body.light-mode .education-item:hover, 
+body.light-mode .project-item:hover, 
+body.light-mode .skill-item:hover, 
+body.light-mode .publication-item:hover, 
+body.light-mode .leadership-item:hover, 
+body.light-mode .qualification-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(67, 97, 238, 0.15);
+}
+
+/* Enhanced skill tags for light mode */
+body.light-mode .skill-tag {
+  background: rgba(67, 97, 238, 0.1);
+  color: var(--accent-color);
+}
+
+body.light-mode .skill-tag:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Enhanced navigation for light mode */
+body.light-mode nav {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode nav a {
+  color: #495057;
+}
+
+body.light-mode nav a:hover {
+  color: var(--accent-color);
+}
+
+body.light-mode nav a.active {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Enhanced buttons for light mode */
+body.light-mode .button, 
+body.light-mode .toggle-mode {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+body.light-mode .button:hover, 
+body.light-mode .toggle-mode:hover {
+  color: white;
+}
+
+/* Enhanced footer for light mode */
+body.light-mode footer {
+  background: rgba(233, 236, 239, 0.7);
+  color: #495057;
+}
+
+/* Add subtle pattern background for light mode */
+body.light-mode::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%234361ee' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+  z-index: -1;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Enhanced particle effect colors for light mode */
+body.light-mode .particle {
+  background-color: rgba(67, 97, 238, 0.2);
+}
+
+/* Add subtle transitions to form elements in light mode */
+body.light-mode .form-group input,
+body.light-mode .form-group textarea {
+  border: 2px solid rgba(67, 97, 238, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+body.light-mode .form-group input:focus,
+body.light-mode .form-group textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.1);
+}
+
+/* Enhanced profile picture border */
+body.light-mode .profile-picture {
+  border: 4px solid var(--accent-color);
+  box-shadow: 0 8px 25px rgba(67, 97, 238, 0.2);
+}
+
+/* Profile picture hover effect enhancement */
+body.light-mode .profile-picture:hover {
+  box-shadow: 0 12px 35px rgba(67, 97, 238, 0.3);
+}
+
+/* Enhanced toggle button UI for light/dark mode */
+body.light-mode .toggle-mode i.fa-sun {
+  color: #ff9e00;
+}
+
+/* Header text color enhancement */
+body.light-mode header h1 {
+  color: #212529;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll indicator enhancement */
+body.light-mode .scroll-indicator {
+  background: var(--accent-color);
+}
+
+/* Scroll to top button enhancements */
+body.light-mode .scroll-top {
+  background: var(--accent-color);
+  color: white;
+}
+
+body.light-mode .scroll-top:hover {
+  box-shadow: 0 8px 25px rgba(67, 97, 238, 0.4);
+}
+
+/* Social links enhancements */
+body.light-mode .social-links a {
+  background: rgba(67, 97, 238, 0.1);
+  color: var(--accent-color);
+}
+
+body.light-mode .social-links a:hover {
+  background: var(--accent-color);
+  color: white;
+  box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
+}
+
+/* Gallery item enhancements */
+body.light-mode .gallery-item {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 3px solid white;
+}
+
+body.light-mode .gallery-item:hover {
+  box-shadow: 0 15px 30px rgba(67, 97, 238, 0.2);
+}
