@@ -273,3 +273,109 @@ function setupMobileNav() {
     // Add mobile navigation setup
     setupMobileNav();
   });
+
+  // Update particle effect to be responsive to theme
+function setupParticles() {
+    const header = document.querySelector('header');
+    const canvas = document.createElement('canvas');
+    canvas.style.position = 'absolute';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.zIndex = '-1';
+    header.appendChild(canvas);
+    
+    const ctx = canvas.getContext('2d');
+    canvas.width = header.offsetWidth;
+    canvas.height = header.offsetHeight;
+    
+    const particles = [];
+    const particleCount = 100;
+    
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 2 + 1,
+        speedX: Math.random() * 1 - 0.5,
+        speedY: Math.random() * 1 - 0.5,
+        opacity: Math.random() * 0.5 + 0.1
+      });
+    }
+    
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      const isDarkMode = !document.body.classList.contains('light-mode');
+      
+      particles.forEach(particle => {
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+        
+        // Change particle color based on theme
+        if (isDarkMode) {
+          ctx.fillStyle = `rgba(100, 255, 218, ${particle.opacity})`;
+        } else {
+          ctx.fillStyle = `rgba(67, 97, 238, ${particle.opacity})`;
+        }
+        
+        ctx.fill();
+        
+        // Move particles
+        particle.x += particle.speedX;
+        particle.y += particle.speedY;
+        
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+      });
+      
+      requestAnimationFrame(drawParticles);
+    }
+    
+    drawParticles();
+    
+    // Update particle colors when theme changes
+    const toggleBtn = document.querySelector('.toggle-mode');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        // Particles color will update on next animation frame
+      });
+    }
+  }
+
+  // Enhanced toggle mode function
+function toggleMode() {
+    document.body.classList.toggle('light-mode');
+    
+    // Update icon and text
+    const toggleBtn = document.querySelector('.toggle-mode i');
+    const toggleText = document.querySelector('.toggle-text');
+    
+    if (document.body.classList.contains('light-mode')) {
+      toggleBtn.className = 'fas fa-sun';
+      if (toggleText) toggleText.textContent = 'Dark Mode';
+      
+      // Add smooth transition animation
+      document.body.classList.add('theme-transition');
+      setTimeout(() => {
+        document.body.classList.remove('theme-transition');
+      }, 1000);
+    } else {
+      toggleBtn.className = 'fas fa-moon';
+      if (toggleText) toggleText.textContent = 'Light Mode';
+      
+      // Add smooth transition animation
+      document.body.classList.add('theme-transition');
+      setTimeout(() => {
+        document.body.classList.remove('theme-transition');
+      }, 1000);
+    }
+    
+    // Save preference to localStorage
+    const isDarkMode = !document.body.classList.contains('light-mode');
+    localStorage.setItem('darkMode', isDarkMode);
+  }
