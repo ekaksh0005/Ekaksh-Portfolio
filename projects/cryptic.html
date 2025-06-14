@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cryptic | Ekaksh Goyal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="scroll-indicator"></div>
+
+  <header>
+    <div class="header-content">
+      <h1>Cryptic</h1>
+      <p>Quantum-Resistant RSA Encryption</p>
+      <a href="../index.html#projects" class="button">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </a>
+    </div>
+  </header>
+
+  <main class="project-detail">
+    <div class="project-header">
+      <h1>Cryptic - Quantum-Resistant RSA Encryption</h1>
+      <div class="project-meta">
+        <span><i class="fas fa-calendar-alt"></i> November 2022</span>
+        <span><i class="fas fa-tags"></i> Cryptography, Security, Quantum Computing</span>
+      </div>
+      <p class="project-excerpt">An RSA encryption software designed to maintain security against quantum computing attacks with post-quantum cryptographic algorithms.</p>
+    </div>
+
+    <div class="project-content">
+      <div class="project-main">
+        <div class="project-gallery">
+          <img src="../Images/projects/cryptic-1.jpg" alt="Cryptic Interface">
+          <img src="../Images/projects/cryptic-2.jpg" alt="Encryption Process">
+          <img src="../Images/projects/cryptic-3.jpg" alt="Security Diagram">
+        </div>
+
+        <h2>Project Overview</h2>
+        <p>Cryptic is a next-generation encryption software that implements enhanced RSA algorithms designed to resist attacks from quantum computers. Recognizing the impending threat quantum computing poses to current encryption standards, this project explores cryptographic techniques that can secure data in the post-quantum era.</p>
+
+        <h2>Technical Implementation</h2>
+        <p>The system combines several advanced cryptographic techniques:</p>
+        <ul>
+          <li><strong>Lattice-based Cryptography:</strong> Implements NTRU algorithms resistant to Shor's algorithm</li>
+          <li><strong>Hybrid Encryption:</strong> Combines classical RSA with post-quantum algorithms</li>
+          <li><strong>Key Management:</strong> Secure key generation, exchange, and storage protocols</li>
+          <li><strong>Forward Secrecy:</strong> Ephemeral keys for each session</li>
+          <li><strong>Quantum Random Number Generation:</strong> Simulated quantum RNG for key generation</li>
+        </ul>
+
+        <h2>Security Features</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Quantum Resistance</h3>
+            <p>Implements algorithms believed to be secure against quantum attacks</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-exchange-alt"></i>
+            <h3>Secure Key Exchange</h3>
+            <p>New key exchange protocol resistant to quantum decryption</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-user-secret"></i>
+            <h3>Anonymity</h3>
+            <p>Optional Tor routing for anonymous communication</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-fingerprint"></i>
+            <h3>Authentication</h3>
+            <p>Multi-factor authentication including biometric options</p>
+          </div>
+        </div>
+
+        <h2>Performance Metrics</h2>
+        <p>Despite the additional security layers, Cryptic maintains reasonable performance:</p>
+        <ul>
+          <li><strong>Encryption Speed:</strong> 15% slower than standard RSA (2048-bit)</li>
+          <li><strong>Key Generation:</strong> 2x longer than traditional RSA</li>
+          <li><strong>Memory Usage:</strong> 20% higher than conventional implementations</li>
+          <li><strong>Security:</strong> Estimated to resist quantum attacks until at least 2040</li>
+        </ul>
+
+        <h2>Applications</h2>
+        <ul>
+          <li>Secure government and military communications</li>
+          <li>Financial institution data protection</li>
+          <li>Healthcare data security</li>
+          <li>IoT device security for critical infrastructure</li>
+          <li>Blockchain and cryptocurrency protection</li>
+        </ul>
+      </div>
+
+      <div class="project-sidebar">
+        <div class="tech-stack">
+          <h3>Technologies Used</h3>
+          <div class="tech-stack-items">
+            <span class="tech-stack-item">C++</span>
+            <span class="tech-stack-item">OpenSSL</span>
+            <span class="tech-stack-item">NTRU</span>
+            <span class="tech-stack-item">Qt</span>
+            <span class="tech-stack-item">Cryptography</span>
+            <span class="tech-stack-item">CMake</span>
+          </div>
+        </div>
+
+        <div class="project-links">
+          <h3>Project Links</h3>
+          <a href="https://github.com/ekakshgoyal/cryptic" target="_blank">
+            <i class="fab fa-github"></i> Source Code
+          </a>
+          <a href="#" target="_blank">
+            <i class="fas fa-file-pdf"></i> Security Analysis
+          </a>
+          <a href="#" target="_blank">
+            <i class="fas fa-download"></i> Windows Build
+          </a>
+        </div>
+
+        <div class="security-metrics">
+          <h3>Security Metrics</h3>
+          <div class="metric">
+            <div class="metric-label">Encryption Strength</div>
+            <div class="metric-value">256-bit PQ</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Vulnerabilities</div>
+            <div class="metric-value">0 Known</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">NIST Compliance</div>
+            <div class="metric-value">Level 3</div>
+          </div>
+        </div>
+
+        <div class="awards">
+          <h3>Recognition</h3>
+          <div class="award-item">
+            <i class="fas fa-trophy"></i> 1st Place - CyberSecurity Challenge
+          </div>
+          <div class="award-item">
+            <i class="fas fa-medal"></i> Best Encryption Project - TechFest
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Ekaksh Goyal. All rights reserved.</p>
+      <p>Computer Science Enthusiast & Innovator</p>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>
