@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hand Gesture Recognition | Ekaksh Goyal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="scroll-indicator"></div>
+
+  <header>
+    <div class="header-content">
+      <h1>Gesture Recognition</h1>
+      <p>Computer Vision System</p>
+      <a href="index.html" class="button">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </a>
+    </div>
+  </header>
+
+  <main class="project-detail">
+    <div class="project-header">
+      <h1>Hand Gesture Recognition System</h1>
+      <div class="project-meta">
+        <span><i class="fas fa-calendar-alt"></i> March 2023</span>
+        <span><i class="fas fa-tags"></i> Computer Vision, Machine Learning, HCI</span>
+      </div>
+      <p class="project-excerpt">A real-time system that interprets hand gestures and converts them into actionable commands using computer vision techniques.</p>
+    </div>
+
+    <div class="project-content">
+      <div class="project-main">
+        <div class="project-gallery">
+          <img src="../Images/projects/gesture-1.jpg" alt="Gesture Recognition Demo">
+          <img src="../Images/projects/gesture-2.jpg" alt="System Architecture">
+          <img src="../Images/projects/gesture-3.jpg" alt="Accuracy Metrics">
+        </div>
+
+        <h2>Project Overview</h2>
+        <p>This hand gesture recognition system was developed to create a natural interface between humans and computers. The system can recognize a variety of hand gestures in real-time and translate them into commands that can control applications, smart home devices, or assistive technologies.</p>
+
+        <h2>Technical Implementation</h2>
+        <p>The system implements a complete pipeline for gesture recognition:</p>
+        <ol>
+          <li><strong>Image Acquisition:</strong> Captures video feed from standard webcam</li>
+          <li><strong>Pre-processing:</strong> Applies filters and transformations to enhance hand features</li>
+          <li><strong>Hand Detection:</strong> Uses contour analysis and convex hull techniques</li>
+          <li><strong>Feature Extraction:</strong> Identifies key points and geometric features</li>
+          <li><strong>Classification:</strong> Machine learning model matches features to known gestures</li>
+          <li><strong>Action Mapping:</strong> Translates recognized gestures to system commands</li>
+        </ol>
+
+        <h2>Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <i class="fas fa-hand-paper"></i>
+            <h3>Gesture Library</h3>
+            <p>Recognizes 15+ standard gestures with customizable mappings</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-tachometer-alt"></i>
+            <h3>Real-time</h3>
+            <p>Processes 30fps with <100ms latency on standard hardware</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-sliders-h"></i>
+            <h3>Adaptive</h3>
+            <p>Adjusts to different lighting conditions and skin tones</p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-plug"></i>
+            <h3>Integrations</h3>
+            <p>Pre-built connectors for common OS and smart home platforms</p>
+          </div>
+        </div>
+
+        <h2>Performance Metrics</h2>
+        <table class="metrics-table">
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+          </tr>
+          <tr>
+            <td>Accuracy</td>
+            <td>94.2% (controlled environment)</td>
+          </tr>
+          <tr>
+            <td>Recognition Speed</td>
+            <td>28ms per frame</td>
+          </tr>
+          <tr>
+            <td>Minimum Hardware</td>
+            <td>2GHz CPU, no GPU required</td>
+          </tr>
+          <tr>
+            <td>Supported OS</td>
+            <td>Windows, Linux, macOS</td>
+          </tr>
+        </table>
+
+        <h2>Applications</h2>
+        <ul>
+          <li><strong>Accessibility:</strong> Assistive technology for mobility-impaired users</li>
+          <li><strong>Smart Homes:</strong> Contactless control of IoT devices</li>
+          <li><strong>Presentations:</strong> Navigate slides without physical devices</li>
+          <li><strong>Gaming:</strong> Alternative input method for immersive experiences</li>
+          <li><strong>Education:</strong> Interactive learning tools</li>
+        </ul>
+      </div>
+
+      <div class="project-sidebar">
+        <div class="tech-stack">
+          <h3>Technologies Used</h3>
+          <div class="tech-stack-items">
+            <span class="tech-stack-item">Python</span>
+            <span class="tech-stack-item">OpenCV</span>
+            <span class="tech-stack-item">MediaPipe</span>
+            <span class="tech-stack-item">TensorFlow</span>
+            <span class="tech-stack-item">PyAutoGUI</span>
+            <span class="tech-stack-item">NumPy</span>
+          </div>
+        </div>
+
+        <div class="project-links">
+          <h3>Project Links</h3>
+          <a href="https://github.com/ekakshgoyal/gesture-recognition" target="_blank">
+            <i class="fab fa-github"></i> Source Code
+          </a>
+          <a href="#" target="_blank">
+            <i class="fas fa-file-pdf"></i> Technical Paper
+          </a>
+          <a href="#" target="_blank">
+            <i class="fas fa-play-circle"></i> Demo Video
+          </a>
+        </div>
+
+        <div class="recognition-metrics">
+          <h3>Recognition Metrics</h3>
+          <div class="metric">
+            <div class="metric-label">Accuracy</div>
+            <div class="metric-value">94.2%</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Gestures</div>
+            <div class="metric-value">15+</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Latency</div>
+            <div class="metric-value"><100ms</div>
+          </div>
+        </div>
+
+        <div class="potential-apps">
+          <h3>Potential Applications</h3>
+          <ul>
+            <li>Assistive Technology</li>
+            <li>Smart Home Control</li>
+            <li>Interactive Kiosks</li>
+            <li>Virtual Reality</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Ekaksh Goyal. All rights reserved.</p>
+      <p>Computer Science Enthusiast & Innovator</p>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

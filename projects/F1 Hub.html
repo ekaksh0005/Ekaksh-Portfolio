@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Hub | Ekaksh Goyal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="scroll-indicator"></div>
+
+  <header>
+    <div class="header-content">
+      <h1>F1 Pokedex</h1>
+      <p>Comprehensive Formula 1 Database</p>
+      <a href="index.html" class="button">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </a>
+    </div>
+  </header>
+
+  <main class="project-detail">
+    <div class="project-header">
+      <h1>F1 Hub - Comprehensive Formula 1 Database</h1>
+      <div class="project-meta">
+        <span><i class="fas fa-calendar-alt"></i> August 2022</span>
+        <span><i class="fas fa-tags"></i> Python, Data Scraping, Sports Analytics</span>
+      </div>
+      <p class="project-excerpt">A Pokédex-style Python application containing detailed Formula 1 information with statistical analysis capabilities.</p>
+    </div>
+
+    <div class="project-content">
+      <div class="project-main">
+        <div class="project-gallery">
+          <img src="../Images/projects/f1hub-1.jpg" alt="F1 Hub Interface">
+          <img src="../Images/projects/f1hub-2.jpg" alt="Driver Statistics">
+          <img src="../Images/projects/f1hub-3.jpg" alt="Race Analysis">
+        </div>
+
+        <h2>Project Overview</h2>
+        <p>F1 Hub is a comprehensive Formula 1 database application that provides detailed information about drivers, teams, circuits, and race statistics in an intuitive interface inspired by the Pokédex. The application serves as both an information resource and an analytical tool for F1 enthusiasts.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+          <li><strong>Extensive Database:</strong> Contains information on all F1 drivers (1950-present), teams, circuits, and race results</li>
+          <li><strong>Statistical Analysis:</strong> Compare driver/team performance across seasons and circuits</li>
+          <li><strong>Interactive Visualizations:</strong> Generate charts and graphs of performance metrics</li>
+          <li><strong>Predictive Modeling:</strong> Machine learning models to predict race outcomes based on historical data</li>
+          <li><strong>Live Data Integration:</strong> Option to fetch real-time race data during events</li>
+        </ul>
+
+        <h2>Data Collection</h2>
+        <p>The project involved significant data collection and processing:</p>
+        <ul>
+          <li><strong>Web Scraping:</strong> Developed custom scrapers for official F1 sites and fan wikis</li>
+          <li><strong>API Integration:</strong> Connected to Ergast Developer API for historical data</li>
+          <li><strong>Data Cleaning:</strong> Processed and normalized inconsistent historical records</li>
+          <li><strong>Database Design:</strong> Created optimized relational database schema</li>
+        </ul>
+
+        <h2>Technical Implementation</h2>
+        <div class="implementation-grid">
+          <div class="impl-item">
+            <i class="fas fa-database"></i>
+            <h3>Data Layer</h3>
+            <p>SQLite database with 20+ tables containing 100,000+ records</p>
+          </div>
+          <div class="impl-item">
+            <i class="fas fa-chart-line"></i>
+            <h3>Analysis</h3>
+            <p>Pandas for data manipulation and statistical analysis</p>
+          </div>
+          <div class="impl-item">
+            <i class="fas fa-desktop"></i>
+            <h3>Interface</h3>
+            <p>Tkinter GUI with custom widgets and themes</p>
+          </div>
+          <div class="impl-item">
+            <i class="fas fa-brain"></i>
+            <h3>ML Models</h3>
+            <p>Scikit-learn for race outcome prediction</p>
+          </div>
+        </div>
+
+        <h2>User Experience</h2>
+        <p>The application was designed with both casual fans and hardcore enthusiasts in mind:</p>
+        <ul>
+          <li><strong>Quick Search:</strong> Find any driver/team/circuit with autocomplete</li>
+          <li><strong>Comparison Tools:</strong> Side-by-side stats for any two entities</li>
+          <li><strong>Timeline View:</strong> Visualize performance changes over time</li>
+          <li><strong>Custom Reports:</strong> Generate printable summaries</li>
+        </ul>
+      </div>
+
+      <div class="project-sidebar">
+        <div class="tech-stack">
+          <h3>Technologies Used</h3>
+          <div class="tech-stack-items">
+            <span class="tech-stack-item">Python</span>
+            <span class="tech-stack-item">Tkinter</span>
+            <span class="tech-stack-item">SQLite</span>
+            <span class="tech-stack-item">Pandas</span>
+            <span class="tech-stack-item">BeautifulSoup</span>
+            <span class="tech-stack-item">Matplotlib</span>
+          </div>
+        </div>
+
+        <div class="project-links">
+          <h3>Project Links</h3>
+          <a href="https://github.com/ekakshgoyal/f1hub" target="_blank">
+            <i class="fab fa-github"></i> Source Code
+          </a>
+          <a href="#" target="_blank">
+            <i class="fas fa-download"></i> Windows Executable
+          </a>
+          <a href="#" target="_blank">
+            <i class="fas fa-play-circle"></i> Demo Video
+          </a>
+        </div>
+
+        <div class="data-stats">
+          <h3>Database Statistics</h3>
+          <div class="stat-item">
+            <div class="stat-value">70+</div>
+            <div class="stat-label">Years of Data</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">800+</div>
+            <div class="stat-label">Drivers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">1000+</div>
+            <div class="stat-label">Races</div>
+          </div>
+        </div>
+
+        <div class="user-feedback">
+          <h3>User Feedback</h3>
+          <div class="feedback-item">
+            <i class="fas fa-quote-left"></i>
+            <p>"The most comprehensive F1 stats tool I've used - perfect for settling debates!"</p>
+            <div class="feedback-author">- F1 Enthusiast</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Ekaksh Goyal. All rights reserved.</p>
+      <p>Computer Science Enthusiast & Innovator</p>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>
