@@ -380,4 +380,5 @@ function toggleMode() {
     localStorage.setItem('darkMode', isDarkMode);
   }
 
-  
+  // Example: Remove any opacity/transform overrides
+document.getElementById("projects").style.opacity = "1";
