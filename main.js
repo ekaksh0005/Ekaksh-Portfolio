@@ -379,3 +379,48 @@ function toggleMode() {
     const isDarkMode = !document.body.classList.contains('light-mode');
     localStorage.setItem('darkMode', isDarkMode);
   }
+
+  // Project page specific animations
+if (document.querySelector('.project-detail')) {
+  // Animate project gallery images
+  document.querySelectorAll('.project-gallery img').forEach((img, index) => {
+    img.style.opacity = '0';
+    img.style.transform = 'translateY(20px)';
+    img.style.transition = `all 0.5s ease ${index * 0.1}s`;
+    
+    setTimeout(() => {
+      img.style.opacity = '1';
+      img.style.transform = 'translateY(0)';
+    }, 100);
+  });
+  
+  // Animate feature items
+  document.querySelectorAll('.feature-item').forEach((item, index) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(20px)';
+    item.style.transition = `all 0.5s ease ${index * 0.1}s`;
+    
+    setTimeout(() => {
+      item.style.opacity = '1';
+      item.style.transform = 'translateY(0)';
+    }, 200 + (index * 100));
+  });
+  
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 100,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+}
