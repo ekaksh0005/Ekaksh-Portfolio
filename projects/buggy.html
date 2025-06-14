@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buggy App | Ekaksh Goyal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="scroll-indicator"></div>
+
+  <header>
+    <div class="header-content">
+      <h1>Buggy App</h1>
+      <p>Vulnerability Alert System</p>
+      <a href="index.html" class="button">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </a>
+    </div>
+  </header>
+
+  <main class="project-detail">
+    <div class="project-header">
+      <h1>Buggy - Vulnerability Alert System</h1>
+      <div class="project-meta">
+        <span><i class="fas fa-calendar-alt"></i> April 2023</span>
+        <span><i class="fas fa-tags"></i> Cybersecurity, Monitoring, Alerts</span>
+      </div>
+      <p class="project-excerpt">An application that provides real-time notifications about software bugs and security vulnerabilities with resolution status tracking.</p>
+    </div>
+
+    <div class="project-content">
+      <div class="project-main">
+        <div class="project-gallery">
+          <img src="../Images/projects/buggy-1.jpg" alt="Buggy Dashboard">
+          <img src="../Images/projects/buggy-2.jpg" alt="Vulnerability Details">
+          <img src="../Images/projects/buggy-3.jpg" alt="Notification System">
+        </div>
+
+        <h2>Project Overview</h2>
+        <p>Buggy is a vulnerability monitoring system designed to help developers and IT professionals stay informed about critical software vulnerabilities affecting their systems. The application aggregates data from multiple security databases and provides actionable alerts with severity ratings and patch availability information.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+          <li><strong>Real-time Monitoring:</strong> Continuously scans multiple vulnerability databases</li>
+          <li><strong>Custom Alerts:</strong> Configurable notifications based on severity and software inventory</li>
+          <li><strong>Impact Analysis:</strong> Estimates potential damage from unpatched vulnerabilities</li>
+          <li><strong>Patch Tracking:</strong> Monitors patch development and release status</li>
+          <li><strong>Reporting:</strong> Generates compliance and audit reports</li>
+          <li><strong>Integration:</strong> Works with common project management tools</li>
+        </ul>
+
+        <h2>Technical Architecture</h2>
+        <p>The system is built with a modular architecture:</p>
+        <div class="architecture-diagram">
+          <div class="arch-layer">
+            <h3>Data Collection Layer</h3>
+            <p>Scrapers and API connectors for NVD, CVE, vendor advisories</p>
+          </div>
+          <div class="arch-layer">
+            <h3>Processing Layer</h3>
+            <p>Normalization, severity scoring, correlation engine</p>
+          </div>
+          <div class="arch-layer">
+            <h3>Storage Layer</h3>
+            <p>Database with optimized query capabilities</p>
+          </div>
+          <div class="arch-layer">
+            <h3>Presentation Layer</h3>
+            <p>Web interface, mobile app, and API endpoints</p>
+          </div>
+        </div>
+
+        <h2>Security Measures</h2>
+        <ul>
+          <li>End-to-end encryption for all communications</li>
+          <li>Role-based access control with 2FA</li>
+          <li>Regular penetration testing</li>
+          <li>Isolated data processing containers</li>
+          <li>Immutable audit logs</li>
+        </ul>
+
+        <h2>Performance Metrics</h2>
+        <table class="metrics-table">
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+          </tr>
+          <tr>
+            <td>Vulnerability Sources</td>
+            <td>15+ databases monitored</td>
+          </tr>
+          <tr>
+            <td>Update Frequency</td>
+            <td>Every 15 minutes</td>
+          </tr>
+          <tr>
+            <td>Notification Latency</td>
+            <td>< 5 minutes from discovery</td>
+          </tr>
+          <tr>
+            <td>System Accuracy</td>
+            <td>99.2% vulnerability matching</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="project-sidebar">
+        <div class="tech-stack">
+          <h3>Technologies Used</h3>
+          <div class="tech-stack-items">
+            <span class="tech-stack-item">Python</span>
+            <span class="tech-stack-item">Django</span>
+            <span class="tech-stack-item">PostgreSQL</span>
+            <span class="tech-stack-item">Celery</span>
+            <span class="tech-stack-item">Redis</span>
+            <span class="tech-stack-item">Docker</span>
+          </div>
+        </div>
+
+        <div class="project-links">
+          <h3>Project Links</h3>
+          <a href="https://github.com/ekakshgoyal/buggy-app" target="_blank">
+            <i class="fab fa-github"></i> Source Code
+          </a>
+          <a href="#" target="_blank">
+            <i class="fas fa-file-pdf"></i> Security Whitepaper
+          </a>
+          <a href="#" target="_blank">
+            <i class="fas fa-download"></i> Windows Installer
+          </a>
+        </div>
+
+        <div class="security-metrics">
+          <h3>Detection Metrics</h3>
+          <div class="metric">
+            <div class="metric-label">Vulnerabilities</div>
+            <div class="metric-value">150,000+</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Accuracy</div>
+            <div class="metric-value">99.2%</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Latency</div>
+            <div class="metric-value"><5min</div>
+          </div>
+        </div>
+
+        <div class="use-cases">
+          <h3>Use Cases</h3>
+          <ul>
+            <li>Enterprise Security Teams</li>
+            <li>Software Developers</li>
+            <li>IT Administrators</li>
+            <li>Compliance Officers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Ekaksh Goyal. All rights reserved.</p>
+      <p>Computer Science Enthusiast & Innovator</p>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>
