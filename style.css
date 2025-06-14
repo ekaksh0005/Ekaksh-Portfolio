@@ -1018,3 +1018,134 @@ body.light-mode .gallery-item {
 body.light-mode .gallery-item:hover {
   box-shadow: 0 15px 30px rgba(67, 97, 238, 0.2);
 }
+
+/* Project Actions */
+.project-actions {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.learn-more {
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Project Detail Page Styles */
+.project-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.project-header .project-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 3rem;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.03);
+}
+
+.project-sidebar {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+.tech-stack {
+  background: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.tech-stack h3 {
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.tech-stack-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-stack-item {
+  background: rgba(100,255,218,0.1);
+  color: var(--accent-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.project-links {
+  background: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.project-links h3 {
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.project-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+  margin-bottom: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .project-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-sidebar {
+    position: static;
+  }
+}
