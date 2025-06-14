@@ -2262,3 +2262,74 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+/* Projects Section - Mobile Fix */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.project-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border-left: 4px solid var(--accent-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure full width */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Ensure project cards don't shrink */
+.project-item h3,
+.project-item p,
+.project-item .project-actions {
+  min-width: 0; /* Fix flexbox overflow */
+}
+
+@media (max-width: 768px) {
+  /* Fix project card spacing */
+  .project-item {
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+  }
+
+  /* Adjust project title and text */
+  .project-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-item p {
+    font-size: 0.95rem;
+  }
+
+  /* Stack project buttons vertically */
+  .project-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .project-actions a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Ensure section is visible when scrolled to */
+section#projects {
+  opacity: 1 !important; /* Override any JS visibility triggers */
+  transform: none !important;
+  scroll-margin-top: 80px; /* Account for fixed header */
+}
+
+/* Prevent horizontal overflow */
+.projects-grid,
+.project-item,
+.project-item * {
+  max-width: 100%;
+  overflow-x: hidden;
+}
