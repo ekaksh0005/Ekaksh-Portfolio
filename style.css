@@ -910,7 +910,6 @@ body.light-mode nav a.active {
   color: white;
 }
 
-/* Enhanced buttons for light mode */
 body.light-mode .button, 
 body.light-mode .toggle-mode {
   border-color: var(--accent-color);
@@ -922,13 +921,13 @@ body.light-mode .toggle-mode:hover {
   color: white;
 }
 
-/* Enhanced footer for light mode */
+
 body.light-mode footer {
   background: rgba(233, 236, 239, 0.7);
   color: #495057;
 }
 
-/* Add subtle pattern background for light mode */
+
 body.light-mode::before {
   content: '';
   position: fixed;
@@ -960,34 +959,34 @@ body.light-mode .form-group textarea:focus {
   box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.1);
 }
 
-/* Enhanced profile picture border */
+
 body.light-mode .profile-picture {
   border: 4px solid var(--accent-color);
   box-shadow: 0 8px 25px rgba(67, 97, 238, 0.2);
 }
 
-/* Profile picture hover effect enhancement */
+
 body.light-mode .profile-picture:hover {
   box-shadow: 0 12px 35px rgba(67, 97, 238, 0.3);
 }
 
-/* Enhanced toggle button UI for light/dark mode */
+
 body.light-mode .toggle-mode i.fa-sun {
   color: #ff9e00;
 }
 
-/* Header text color enhancement */
+
 body.light-mode header h1 {
   color: #212529;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Scroll indicator enhancement */
+
 body.light-mode .scroll-indicator {
   background: var(--accent-color);
 }
 
-/* Scroll to top button enhancements */
+
 body.light-mode .scroll-top {
   background: var(--accent-color);
   color: white;
@@ -997,7 +996,7 @@ body.light-mode .scroll-top:hover {
   box-shadow: 0 8px 25px rgba(67, 97, 238, 0.4);
 }
 
-/* Social links enhancements */
+
 body.light-mode .social-links a {
   background: rgba(67, 97, 238, 0.1);
   color: var(--accent-color);
@@ -1009,7 +1008,7 @@ body.light-mode .social-links a:hover {
   box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
 }
 
-/* Gallery item enhancements */
+
 body.light-mode .gallery-item {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   border: 3px solid white;
@@ -1019,7 +1018,7 @@ body.light-mode .gallery-item:hover {
   box-shadow: 0 15px 30px rgba(67, 97, 238, 0.2);
 }
 
-/* Project Actions */
+
 .project-actions {
   margin-top: auto;
   padding-top: 1.5rem;
@@ -1035,7 +1034,7 @@ body.light-mode .gallery-item:hover {
   gap: 0.5rem;
 }
 
-/* Project Detail Page Styles */
+
 .project-detail {
   max-width: 1200px;
   margin: 0 auto;
@@ -1151,7 +1150,6 @@ body.light-mode .gallery-item:hover {
 }
 
 :root {
-    /* Apple-inspired color palette */
     --primary-color: #000000;
     --secondary-color: #1d1d1f;
     --tertiary-color: #2d2d30;
@@ -1170,7 +1168,6 @@ body.light-mode .gallery-item:hover {
 }
 
 body.light-mode {
-    /* Apple light mode palette */
     --primary-color: #ffffff;
     --secondary-color: #f5f5f7;
     --tertiary-color: #f2f2f7;
@@ -1208,7 +1205,7 @@ body {
     min-height: 100vh;
 }
 
-/* Apple-style backdrop blur utilities */
+
 .glass-morphism {
     background: var(--glass-bg);
     backdrop-filter: blur(var(--blur-amount));
@@ -1217,7 +1214,7 @@ body {
     box-shadow: var(--shadow-primary);
 }
 
-/* Enhanced Header */
+
 header {
     text-align: center;
     padding: 8rem 2rem 4rem;
@@ -1241,7 +1238,7 @@ header::before {
     z-index: -2;
 }
 
-/* Floating particles effect */
+
 header::after {
     content: '';
     position: absolute;
@@ -1294,7 +1291,7 @@ header p {
     font-weight: 500;
 }
 
-/* Enhanced Profile Container */
+
 .profile-container {
     position: relative;
     width: 280px;
@@ -1352,7 +1349,7 @@ header p {
     transform: scale(1.1);
 }
 
-/* Apple-style Navigation */
+
 nav {
     margin-top: 3rem;
     display: flex;
@@ -1415,7 +1412,7 @@ nav a.active {
     transform: translateY(-2px);
 }
 
-/* Mobile Navigation Enhancement */
+
 .mobile-nav-toggle {
     display: none;
     background: var(--glass-bg);
@@ -1439,7 +1436,6 @@ nav a.active {
     box-shadow: var(--shadow-hover);
 }
 
-/* Enhanced Sections */
 section {
     padding: 8rem 2rem;
     max-width: 1200px;
@@ -1475,7 +1471,7 @@ h2::after {
     border-radius: 2px;
 }
 
-/* Apple-style Buttons */
+
 .button, .toggle-mode {
     display: inline-flex;
     align-items: center;
@@ -1519,7 +1515,7 @@ h2::after {
     box-shadow: var(--shadow-hover);
 }
 
-/* Enhanced Cards */
+
 .experience-item, .education-item, .project-item, .skill-item, 
 .publication-item, .leadership-item, .qualification-item {
     background: var(--glass-bg);
@@ -1565,7 +1561,6 @@ h2::after {
     letter-spacing: -0.01em;
 }
 
-/* Enhanced Skill Tags */
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
@@ -1593,7 +1588,7 @@ h2::after {
     box-shadow: 0 8px 25px rgba(0, 122, 255, 0.3);
 }
 
-/* Enhanced Contact Form */
+
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -1667,7 +1662,7 @@ h2::after {
     background: var(--accent-secondary);
 }
 
-/* Enhanced Scroll Elements */
+
 .scroll-top {
     position: fixed;
     bottom: 30px;
@@ -1703,7 +1698,7 @@ h2::after {
     color: white;
 }
 
-/* Enhanced Scroll Indicator */
+
 .scroll-indicator {
     position: fixed;
     top: 0;
@@ -1716,7 +1711,7 @@ h2::after {
     border-radius: 0 0 2px 0;
 }
 
-/* Enhanced Social Links */
+
 .social-links {
     display: flex;
     justify-content: center;
@@ -1747,7 +1742,6 @@ h2::after {
     box-shadow: var(--shadow-hover);
 }
 
-/* Enhanced Footer */
 footer {
     text-align: center;
     padding: 4rem 2rem;
@@ -1760,7 +1754,7 @@ footer {
     border-top: 1px solid var(--glass-border);
 }
 
-/* Enhanced Theme Toggle */
+
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
@@ -1816,7 +1810,6 @@ input:checked + .slider:before {
     background: white;
 }
 
-/* Enhanced Animations */
 @keyframes fadeInUp {
     0% { opacity: 0; transform: translateY(60px); }
     100% { opacity: 1; transform: translateY(0); }
@@ -1834,7 +1827,7 @@ input:checked + .slider:before {
     to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-/* Enhanced Grid Layouts */
+
 .projects-grid, .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -1876,7 +1869,6 @@ input:checked + .slider:before {
     transform: scale(1.1);
 }
 
-/* Enhanced Responsive Design */
 @media (max-width: 768px) {
     header {
         padding: 6rem 1.5rem 3rem;
@@ -1977,7 +1969,7 @@ input:checked + .slider:before {
     }
 }
 
-/* Dark mode specific enhancements */
+
 body:not(.light-mode) {
     --glow-color: rgba(0, 122, 255, 0.5);
 }
@@ -1990,7 +1982,7 @@ body:not(.light-mode) .skill-tag:hover {
     box-shadow: 0 8px 25px var(--glow-color);
 }
 
-/* Light mode specific enhancements */
+
 body.light-mode {
     --glow-color: rgba(0, 122, 255, 0.2);
 }
@@ -1999,25 +1991,25 @@ body.light-mode .profile-picture:hover {
     box-shadow: 0 20px 60px rgba(0, 122, 255, 0.15);
 }
 
-/* Additional Apple-style micro-interactions */
+
 .button, .skill-tag, .social-links a, nav a {
     -webkit-tap-highlight-color: transparent;
     user-select: none;
 }
 
-/* Enhanced focus states for accessibility */
+
 *:focus-visible {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
     border-radius: 4px;
 }
 
-/* Smooth scrolling enhancement */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Enhanced list styling */
+
 ul li::before {
     content: '→';
     color: var(--accent-color);
@@ -2025,7 +2017,7 @@ ul li::before {
     margin-right: 0.5rem;
 }
 
-/* Final polish animations */
+
 .header-buttons {
     display: flex;
     justify-content: center;
@@ -2035,9 +2027,9 @@ ul li::before {
     animation: fadeInUp 1.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Mobile Navigation Styles */
+
 .mobile-nav-toggle {
-  display: none; /* Hidden by default, shown only on mobile */
+  display: none; 
   position: fixed;
   top: 20px;
   right: 20px;
@@ -2063,7 +2055,7 @@ body.light-mode .mobile-nav-toggle {
   transform: scale(1.1);
 }
 
-/* Main Navigation - Mobile Styles */
+
 nav {
   position: fixed;
   top: 0;
@@ -2115,7 +2107,7 @@ nav a.active {
   color: var(--primary-color);
 }
 
-/* Navigation Overlay */
+
 .nav-overlay {
   position: fixed;
   top: 0;
@@ -2134,16 +2126,16 @@ nav a.active {
   pointer-events: all;
 }
 
-/* Mobile Responsive Adjustments */
+
 @media (max-width: 768px) {
-  /* Show mobile toggle button */
+
   .mobile-nav-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  /* Adjust header padding */
+
   header {
     padding: 5rem 1rem 2rem;
   }
@@ -2156,7 +2148,7 @@ nav a.active {
     font-size: 1.2rem;
   }
   
-  /* Profile picture sizing */
+
   .profile-container {
     width: 180px;
     height: 180px;
@@ -2167,7 +2159,7 @@ nav a.active {
     height: 160px;
   }
   
-  /* Section adjustments */
+
   section {
     padding: 4rem 1.5rem;
     scroll-margin-top: 70px;
@@ -2177,14 +2169,14 @@ nav a.active {
     font-size: 2rem;
   }
   
-  /* Single column layout for grids */
+
   .gallery, 
   .projects-grid, 
   .skills-container {
     grid-template-columns: 1fr;
   }
   
-  /* Card adjustments */
+
   .experience-item,
   .education-item,
   .project-item,
@@ -2193,7 +2185,7 @@ nav a.active {
   }
 }
 
-/* Very small devices (phones, 480px and down) */
+
 @media (max-width: 480px) {
   header h1 {
     font-size: 2rem;
@@ -2214,7 +2206,7 @@ nav a.active {
     text-align: center;
   }
   
-  /* Smaller profile picture */
+
   .profile-container {
     width: 150px;
     height: 150px;
@@ -2225,13 +2217,13 @@ nav a.active {
     height: 130px;
   }
   
-  /* Adjust section padding */
+
   section {
     padding: 3rem 1rem;
   }
 }
 
-/* Mobile Landscape Orientation */
+
 @media (max-height: 480px) and (orientation: landscape) {
   nav {
     padding-top: 60px;
@@ -2252,21 +2244,21 @@ nav a.active {
   }
 }
 
-/* Smooth scrolling for anchor links */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Prevent horizontal scrolling */
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* Projects Section - Mobile Fix */
+
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Single column on mobile */
+  grid-template-columns: 1fr; 
   gap: 1.5rem;
   width: 100%;
   margin: 0 auto;
@@ -2280,25 +2272,24 @@ html, body {
   border-left: 4px solid var(--accent-color);
   transition: all 0.3s ease;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Ensure full width */
-  overflow: hidden; /* Prevent content overflow */
+  width: 100%; 
+  overflow: hidden; 
 }
 
-/* Ensure project cards don't shrink */
+
 .project-item h3,
 .project-item p,
 .project-item .project-actions {
-  min-width: 0; /* Fix flexbox overflow */
+  min-width: 0; 
 }
 
 @media (max-width: 768px) {
-  /* Fix project card spacing */
   .project-item {
     margin-bottom: 1.5rem;
     padding: 1.2rem;
   }
 
-  /* Adjust project title and text */
+
   .project-item h3 {
     font-size: 1.3rem;
   }
@@ -2307,7 +2298,7 @@ html, body {
     font-size: 0.95rem;
   }
 
-  /* Stack project buttons vertically */
+
   .project-actions {
     flex-direction: column;
     gap: 0.8rem;
@@ -2319,14 +2310,14 @@ html, body {
   }
 }
 
-/* Ensure section is visible when scrolled to */
+
 section#projects {
   opacity: 1 !important; /* Override any JS visibility triggers */
   transform: none !important;
   scroll-margin-top: 80px; /* Account for fixed header */
 }
 
-/* Prevent horizontal overflow */
+
 .projects-grid,
 .project-item,
 .project-item * {
