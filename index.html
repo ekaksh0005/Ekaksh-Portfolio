@@ -22,21 +22,789 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   
-  <!-- FontAwesome -->
+  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Stylesheet -->
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body style="background-color: rgb(10, 10, 12); font-family: 'Geist', sans-serif" data-screen-label="Portfolio · Main">
-  <div id="root"></div>
 
-  <!-- React 18, ReactDOM 18 & Babel Standalone (matching chahel.tech architecture) -->
-  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-mark">
+      <span class="dot"></span>
+      <span class="mono">EKAKSH GOYAL · PORTFOLIO</span>
+    </div>
+    <div class="nav-links">
+      <a href="#work"><span class="idx mono">01</span> Work</a>
+      <a href="#research"><span class="idx mono">02</span> Research</a>
+      <a href="#education"><span class="idx mono">03</span> Education</a>
+      <a href="#skills"><span class="idx mono">04</span> Skills</a>
+      <a href="#leadership"><span class="idx mono">05</span> Leadership</a>
+      <a href="#about"><span class="idx mono">06</span> About</a>
+    </div>
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <a class="nav-cta" href="Resume/EkakshGoyal_Resume.pdf" target="_blank" download="EkakshGoyal_Resume.pdf">
+        <span>Resume</span>
+        <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2 V11 M4 7 L8 11 L12 7 M3 14 H13"></path></svg>
+      </a>
+      <a class="nav-cta" href="#contact">
+        <span>Get in touch</span>
+        <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 11 L11 5 M6 5 H11 V10"></path></svg>
+      </a>
+    </div>
+  </nav>
 
-  <!-- Complete Site Code in main.js -->
-  <script type="text/babel" src="main.js"></script>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-meta-top mono">
+      <div class="pair"><span>Portfolio</span><span class="sep">/</span><span>2026</span></div>
+      <div class="pair"><span>Noida, India</span><span class="sep">/</span><span>IST (UTC+5:30)</span></div>
+    </div>
+    <div class="hero-left">
+      <div>
+        <div style="display: inline-flex; align-items: center; gap: 12px; font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--text-mute); letter-spacing: 0.12em; text-transform: uppercase;">
+          <span style="width: 28px; height: 1px; background: var(--accent);"></span>
+          CYBERSECURITY / QUANTUM-SAFE AI / ROBOTICS
+        </div>
+        <h1 class="hero-name" style="margin-top: 18px;">
+          <span class="ln line-ekaksh" id="lineEkaksh">Ekaksh</span>
+          <span class="ln indent line-goyal" id="lineGoyal">Goyal</span>
+        </h1>
+      </div>
+      <div class="hero-tag">
+        <p>
+          I engineer high-impact intelligent systems — from <strong>quantum-resistant encryption</strong> and <strong>protein folding analysis AI</strong> to assistive robotics and computer vision. Leading the Youth Wing at Aarambh Trust, researching AI in automobile systems, and building technology that solves real-world challenges.
+        </p>
+        <div class="role-strip">
+          <span class="chip accent">Available — Summer 2026 / Undergrad</span>
+          <span class="chip">Quantum & Cybersecurity</span>
+          <span class="chip">Assistive Tech & AI</span>
+        </div>
+        <div style="display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap;">
+          <a class="btn btn-primary" href="Resume/EkakshGoyal_Resume.pdf" target="_blank" download="EkakshGoyal_Resume.pdf">
+            <span>Download Resume</span>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2 V11 M4 7 L8 11 L12 7 M3 14 H13"></path></svg>
+          </a>
+          <a class="btn btn-ghost" href="#contact">
+            <span>Get in touch</span>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 11 L11 5 M6 5 H11 V10"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="portrait-stage" id="portraitStage">
+        <div class="portrait-frame" id="portraitFrame">
+          <img src="Images/Profile3.jpeg" class="portrait-img" alt="Ekaksh Goyal" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\' viewBox=\'0 0 400 500\'><rect width=\'100%25\' height=\'100%25\' fill=\'%23111116\'/><circle cx=\'200\' cy=\'180\' r=\'60\' fill=\'%231d1d24\' stroke=\'%2364ffda\' stroke-width=\'2\'/><path d=\'M100 360 C100 270 300 270 300 360\' fill=\'%231d1d24\' stroke=\'%2364ffda\' stroke-width=\'2\'/><text x=\'200\' y=\'420\' font-family=\'monospace\' font-size=\'14\' fill=\'%238a8a92\' text-anchor=\'middle\'>EKAKSH GOYAL</text></svg>';" />
+          <div class="portrait-veil"></div>
+          <span style="position: absolute; width: 14px; height: 14px; border: 1px solid var(--accent); z-index: 4; top: 12px; left: 12px; border-right: 0; border-bottom: 0;"></span>
+          <span style="position: absolute; width: 14px; height: 14px; border: 1px solid var(--accent); z-index: 4; top: 12px; right: 12px; border-left: 0; border-bottom: 0;"></span>
+          <span style="position: absolute; width: 14px; height: 14px; border: 1px solid var(--accent); z-index: 4; bottom: 12px; left: 12px; border-right: 0; border-top: 0;"></span>
+          <span style="position: absolute; width: 14px; height: 14px; border: 1px solid var(--accent); z-index: 4; bottom: 12px; right: 12px; border-left: 0; border-top: 0;"></span>
+          <span class="portrait-tag t1 mono">Computer Scientist</span>
+          <span class="portrait-tag t2 mono">Cybersecurity & AI</span>
+          <span class="portrait-tag hover-show mono">Grade XII · Noida</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE TICKER -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>
+        <span class="marquee-item">VRITI <span class="sub">quantum · bio AI</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item">KAVACH <span class="sub">post-quantum rsa</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item dim">P.E.R.C.Y <span class="sub">amphibious car kit</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item">SIGN GLOVE <span class="sub">wearable hardware</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item dim">F1 POKEDEX <span class="sub">python database</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item">BUGGY APP <span class="sub">vuln alerts</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item dim">AARAMBH <span class="sub">youth wing leader</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item">IJSDR <span class="sub">published paper</span></span><span class="marquee-sep"></span>
+      </span>
+      <span>
+        <span class="marquee-item">VRITI <span class="sub">quantum · bio AI</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item">KAVACH <span class="sub">post-quantum rsa</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item dim">P.E.R.C.Y <span class="sub">amphibious car kit</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item">SIGN GLOVE <span class="sub">wearable hardware</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item dim">F1 POKEDEX <span class="sub">python database</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item">BUGGY APP <span class="sub">vuln alerts</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item dim">AARAMBH <span class="sub">youth wing leader</span></span><span class="marquee-sep"></span>
+        <span class="marquee-item">IJSDR <span class="sub">published paper</span></span><span class="marquee-sep"></span>
+      </span>
+    </div>
+  </div>
+
+  <!-- WORK (PROJECTS) -->
+  <section class="block" id="work">
+    <div class="block-head reveal">
+      <div class="block-tag mono">SELECTED WORK / 06</div>
+      <h2 class="block-title">Systems that compute, protect, <em>and empower.</em></h2>
+    </div>
+    <div class="projects">
+      <!-- Project 1: Vriti -->
+      <article class="project span-7 reveal" id="cardVriti">
+        <div class="row">
+          <span class="num">01 / BIO-AI</span>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span class="cp-mark"><span style="display: inline-block; width: 7px; height: 7px; background: var(--accent); transform: rotate(45deg);"></span><span class="cp-mark-text mono">EG</span></span>
+            <span class="status amber">Active Research</span>
+          </div>
+        </div>
+        <div class="visual">
+          <div class="viz-aether" style="width: 100%; height: 100%; position: relative;">
+            <canvas id="vritiCanvas" style="width: 100%; height: 100%; cursor: grab;"></canvas>
+            <div class="stl-label mono" style="position: absolute; top: 12px; right: 12px;">VRITI · QUANTUM SIM</div>
+            <div class="stl-hint mono" id="vritiTelemetry" style="position: absolute; bottom: 10px; left: 16px; font-size: 10px; color: var(--text-dim); display: flex; gap: 16px;">
+              <span>ΔE: <strong style="color: var(--accent);">-412.8 kcal/mol</strong></span>
+              <span>RMSD: <strong style="color: var(--text);">0.18 Å</strong></span>
+              <span>ITER: <strong style="color: var(--text-mute);">104</strong></span>
+            </div>
+          </div>
+        </div>
+        <div class="name">Vriti</div>
+        <div class="sub mono">Protein Folding Quantum Analysis AI</div>
+        <p class="desc">Leveraged artificial intelligence and quantum sorting algorithms to model complex protein folding pathways, facilitating accelerated structural prediction for vaccine and drug discovery (modeled SARS-CoV-2 Spike, Tuberculosis Ag85B, and HIV-1 gp120).</p>
+        <div class="tags">
+          <span class="mono">Quantum Computing</span>
+          <span class="mono">AI</span>
+          <span class="mono">Python</span>
+          <span class="mono">Bio-Informatics</span>
+        </div>
+      </article>
+
+      <!-- Project 2: Kavach -->
+      <article class="project span-5 reveal theme-violet" id="cardKavach">
+        <div class="row">
+          <span class="num">02 / CRYPTO</span>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span class="status live">Post-Quantum</span>
+          </div>
+        </div>
+        <div class="visual">
+          <div class="viz-fdir" style="width: 100%; height: 100%;">
+            <div class="panel" style="width: 100%; max-width: 380px; padding: 18px 20px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <span class="mono" style="font-size: 10px; color: var(--accent); letter-spacing: 0.14em;">
+                  <span style="display: inline-block; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; margin-right: 6px;"></span>
+                  KAVACH · POST-QUANTUM CIPHER
+                </span>
+                <span class="mono" style="font-size: 9px; color: oklch(0.78 0.12 145); border: 1px solid rgba(100,255,218,0.3); padding: 2px 6px; border-radius: 4px;">AES-GCM // LATTICE</span>
+              </div>
+              <div class="ln ok"><span>ALGORITHM</span><span class="v mono">CRYSTALS-Kyber + RSA</span></div>
+              <div class="ln ok"><span>KEY STRENGTH</span><span class="v mono">Post-Quantum Safe</span></div>
+              <div class="ln warn"><span>SHOR RESISTANCE</span><span class="v mono">VERIFIED / 100%</span></div>
+              <div class="ln ok"><span>CHANNEL ENCRYPTION</span><span class="v mono">E2E TLS HYBRID</span></div>
+              <hr style="margin: 12px 0; border-color: var(--line);" />
+              <div id="kavachConsole" style="background: rgba(0,0,0,0.4); padding: 8px 10px; border-radius: 4px; font-family: 'Geist Mono', monospace; font-size: 10px; line-height: 1.5;">
+                <div style="color: var(--text-dim);"><span style="opacity: 0.5; margin-right: 6px;">›</span>INIT KAVACH // PQC-LATTICE-GEN</div>
+                <div style="color: var(--text-dim);"><span style="opacity: 0.5; margin-right: 6px;">›</span>ENTROPY POOL: 4096-bit CRYSTALS-Kyber</div>
+                <div style="color: var(--text-dim);"><span style="opacity: 0.5; margin-right: 6px;">›</span>SHOR RESISTANCE: 256-bit Post-Quantum</div>
+                <div style="color: var(--accent);"><span style="opacity: 0.5; margin-right: 6px;">›</span>RSA-4096 WRAPPER: SECURE DUAL-TUNNEL</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="name">Kavach</div>
+        <div class="sub mono">Quantum-Resistant RSA Suite</div>
+        <p class="desc">Advanced encryption software engineered to resist quantum decryption attacks. Features end-to-end encrypted messaging resistant to Shor's algorithm via hybrid lattice key wrapping.</p>
+        <div class="tags">
+          <span class="mono">Lattice Crypto</span>
+          <span class="mono">RSA</span>
+          <span class="mono">Security</span>
+          <span class="mono">Python</span>
+        </div>
+      </article>
+
+      <!-- Project 3: P.E.R.C.Y -->
+      <article class="project span-5 reveal theme-orange" id="cardPercy">
+        <div class="row">
+          <span class="num">03 / HARDWARE</span>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span class="status r">Modular Prototype</span>
+          </div>
+        </div>
+        <div class="visual">
+          <div class="drone3d" style="width: 100%; height: 100%;">
+            <div class="drone3d-stage" style="transform: rotateX(58deg) rotateZ(-28deg);">
+              <div class="drone-grid"></div>
+              <div style="position: absolute; width: 140px; height: 220px; left: 50%; top: 50%; transform: translate(-50%, -50%) translateZ(10px); border: 1.5px solid var(--accent); background: rgba(22, 22, 26, 0.8); border-radius: 8px; box-shadow: 0 0 25px rgba(224, 128, 48, 0.25);">
+                <div style="position: absolute; width: 90px; height: 110px; left: 25px; top: 50px; border: 1px dashed rgba(255, 255, 255, 0.25); background: rgba(10, 10, 12, 0.6); border-radius: 6px;"></div>
+                <div style="position: absolute; left: -22px; top: 20px; width: 22px; height: 180px; border-radius: 12px; border: 1.5px solid #e08030; background: rgba(224, 128, 48, 0.2); box-shadow: 0 0 12px rgba(224, 128, 48, 0.4);"></div>
+                <div style="position: absolute; right: -22px; top: 20px; width: 22px; height: 180px; border-radius: 12px; border: 1.5px solid #e08030; background: rgba(224, 128, 48, 0.2); box-shadow: 0 0 12px rgba(224, 128, 48, 0.4);"></div>
+                <div style="position: absolute; left: -32px; top: 35px; width: 14px; height: 35px; border: 1px solid #fff; background: #111;"></div>
+                <div style="position: absolute; left: -32px; top: 150px; width: 14px; height: 35px; border: 1px solid #fff; background: #111;"></div>
+                <div style="position: absolute; right: -32px; top: 35px; width: 14px; height: 35px; border: 1px solid #fff; background: #111;"></div>
+                <div style="position: absolute; right: -32px; top: 150px; width: 14px; height: 35px; border: 1px solid #fff; background: #111;"></div>
+                <div style="position: absolute; left: 50%; bottom: -20px; width: 14px; height: 14px; transform: translateX(-50%); background: #e08030; border-radius: 50%; box-shadow: 0 0 15px #e08030;"></div>
+              </div>
+            </div>
+            <div class="stl-label mono" style="position: absolute; top: 12px; right: 12px;">P.E.R.C.Y · AMPHIBIOUS KIT</div>
+            <div class="stl-hint mono" style="position: absolute; bottom: 12px; left: 16px;">FLOATATION DEPLOYED · DEPTH SENSOR ACTIVE</div>
+          </div>
+        </div>
+        <div class="name">P.E.R.C.Y</div>
+        <div class="sub mono">Modular Amphibious Vehicle Kit</div>
+        <p class="desc">Designed a modular attachment system converting standard civilian automobiles into amphibious rescue crafts for severe flood emergencies. Features automated pontoons, depth sensors, and specialized propulsion.</p>
+        <div class="tags">
+          <span class="mono">Embedded Systems</span>
+          <span class="mono">Hardware</span>
+          <span class="mono">Sensors</span>
+          <span class="mono">CAD</span>
+        </div>
+      </article>
+
+      <!-- Project 4: Sign Language Glove -->
+      <article class="project span-7 reveal theme-red" id="cardGlove">
+        <div class="row">
+          <span class="num">04 / ASSISTIVE</span>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span class="status live">TMU Internship</span>
+          </div>
+        </div>
+        <div class="visual">
+          <div class="viz-sauron" style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 24px;">
+            <div style="width: 100%; max-width: 360px; background: rgba(10, 10, 12, 0.75); border: 1px solid var(--line-2); border-radius: 6px; padding: 18px 20px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                <span class="mono" style="font-size: 10.5px; color: #e08030; letter-spacing: 0.12em;">WEARABLE TELEMETRY · 5-FLEX ARRAY</span>
+                <span class="mono" style="font-size: 9.5px; color: var(--text-mute);">MPU6050 + BT 5.0</span>
+              </div>
+              <div id="gloveFingers" style="display: flex; flex-direction: column; gap: 7px; margin-bottom: 14px;"></div>
+              <div style="border-top: 1px solid var(--line); padding-top: 10px; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div class="mono" style="font-size: 9px; color: var(--text-mute); text-transform: uppercase;">TTS Audio Stream</div>
+                  <div class="mono" id="gloveSpeechText" style="font-size: 13px; color: var(--accent); font-weight: 500; margin-top: 2px;">HELLO / WELCOME</div>
+                </div>
+                <span class="mono" style="font-size: 10px; color: oklch(0.78 0.12 145);">99.2% ACC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="name">Sign Language Glove</div>
+        <div class="sub mono">Wearable Gesture-to-Speech Array</div>
+        <p class="desc">Engineered a wearable assistive device with flex sensor arrays and IMU sensor fusion that translates sign language in real time into synthesized speech and text for speech/hearing-impaired individuals.</p>
+        <div class="tags">
+          <span class="mono">Wearables</span>
+          <span class="mono">Sensors</span>
+          <span class="mono">Microcontrollers</span>
+          <span class="mono">Data Analysis</span>
+        </div>
+      </article>
+
+      <!-- Project 5: Hand Gesture Recognition -->
+      <article class="project span-6 reveal" id="cardGesture">
+        <div class="row">
+          <span class="num">05 / VISION</span>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span class="status">OpenCV Engine</span>
+          </div>
+        </div>
+        <div class="visual">
+          <div class="viz-sauron">
+            <div class="grid">
+              <span class="node" style="left: 50%; top: 80%;"></span>
+              <span class="node" style="left: 42%; top: 65%;"></span>
+              <span class="node" style="left: 35%; top: 50%;"></span>
+              <span class="node" style="left: 30%; top: 35%;"></span>
+              <span class="node" style="left: 48%; top: 50%;"></span>
+              <span class="node" style="left: 46%; top: 32%;"></span>
+              <span class="node" style="left: 44%; top: 18%;"></span>
+              <span class="node" style="left: 55%; top: 48%;"></span>
+              <span class="node" style="left: 56%; top: 30%;"></span>
+              <span class="node" style="left: 58%; top: 16%;"></span>
+              <span class="node" style="left: 62%; top: 52%;"></span>
+              <span class="node" style="left: 65%; top: 34%;"></span>
+              <span class="node" style="left: 68%; top: 22%;"></span>
+              <span class="node" style="left: 68%; top: 60%;"></span>
+              <span class="node" style="left: 74%; top: 46%;"></span>
+              <span class="node" style="left: 78%; top: 36%;"></span>
+              <span class="target" style="left: 55%; top: 45%;"></span>
+            </div>
+            <div class="stl-label mono" style="position: absolute; top: 12px; right: 12px;">OPENCV · 21 LANDMARKS</div>
+          </div>
+        </div>
+        <div class="name">Hand Gesture Recognition</div>
+        <div class="sub mono">Real-Time Computer Vision Interface</div>
+        <p class="desc">Developed computer vision algorithms to interpret complex hand gestures and translate them into actionable system control commands with sub-50ms latency.</p>
+        <div class="tags">
+          <span class="mono">OpenCV</span>
+          <span class="mono">Computer Vision</span>
+          <span class="mono">Python</span>
+          <span class="mono">HCI</span>
+        </div>
+      </article>
+
+      <!-- Project 6: Aarambh Platform -->
+      <article class="project span-6 reveal theme-lang" id="cardAarambh">
+        <div class="row">
+          <span class="num">06 / IMPACT</span>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span class="cp-mark"><span style="display: inline-block; width: 7px; height: 7px; background: var(--accent); transform: rotate(45deg);"></span><span class="cp-mark-text mono">EG</span></span>
+          </div>
+        </div>
+        <div class="visual">
+          <div class="viz-gauss">
+            <div class="editor">
+              <div class="editor-bar">
+                <span class="dot live"></span><span class="dot"></span><span class="dot"></span>
+                <span class="name">aarambh_core.cpp · charity portal</span>
+              </div>
+              <div class="editor-body">
+                <div><span class="cm">// Aarambh Trust Youth Wing Platform</span></div>
+                <div><span class="kw">#include</span> <span class="nm">&lt;aarambh/security.hpp&gt;</span></div>
+                <div><span class="kw">auto</span> portal = Portal::init(<span class="ac">"YouthWing"</span>);</div>
+                <div>portal.dispatchDonorCampaign(<span class="ac">2024</span>);</div>
+                <div>portal.verifyBugStatus();<span class="caret"></span></div>
+              </div>
+            </div>
+            <div class="console">
+              <div class="ok">✓ 1,200+ beneficiaries logged</div>
+              <div class="ok">✓ encrypted donor ledger verified</div>
+              <div class="ac">▶ youth wing campaigns active</div>
+            </div>
+          </div>
+        </div>
+        <div class="name">Aarambh Platform & Buggy</div>
+        <div class="sub mono">Community Trust Tech & Vuln Alerts</div>
+        <p class="desc">Architected official infrastructure for Aarambh Trust for Women and Children, managing donor links and youth programs. Built the Buggy App alerting users to real-time software vulnerabilities.</p>
+        <div class="tags">
+          <span class="mono">Full-Stack</span>
+          <span class="mono">C++</span>
+          <span class="mono">MySQL</span>
+          <span class="mono">Community Leadership</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- HIRE ME / STATS -->
+  <section class="hire" id="hire">
+    <div class="hire-left">
+      <div class="hire-eyebrow">Available — Summer 2026 / Undergrad</div>
+      <h2 class="hire-title reveal">
+        Connect <span class="stroke">with me</span>.<br />
+        Build something <em style="color: var(--accent); font-style: normal;">intelligent</em>.
+      </h2>
+      <p class="hire-sub reveal">
+        Open to software engineering internships, research fellowships, and university programs in Computer Science, AI, and Cybersecurity. If you build systems that solve tough challenges — let's connect.
+      </p>
+      <div class="hire-actions reveal">
+        <a class="btn btn-primary" href="mailto:ekaksh1031@gmail.com">ekaksh1031@gmail.com</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/ekakshgoyal" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn btn-ghost" href="Resume/EkakshGoyal_Resume.pdf" target="_blank" download="EkakshGoyal_Resume.pdf">
+          <span>Download Resume</span>
+          <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2 V11 M4 7 L8 11 L12 7 M3 14 H13"></path></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hire-right reveal">
+      <div class="hire-stat">
+        <div class="num"><span class="counter" data-target="10">10</span><span class="small">+</span></div>
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 18l1 2a3 3 0 0 0 2.5 1.5h11A3 3 0 0 0 20 20l1-2"></path>
+          <path d="M4 14l8 2 8-2-1-3H5l-1 3z"></path>
+          <path d="M12 16V5"></path>
+          <path d="M12 5l5 4H7l5-4z"></path>
+        </svg>
+        <div class="label">Shipped projects</div>
+      </div>
+      <div class="hire-stat">
+        <div class="num"><span class="counter" data-target="3">3</span></div>
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 3h8l4 4v14H7z"></path>
+          <path d="M15 3v4h4"></path>
+          <path d="M10 12h6M10 16h6M10 8h2"></path>
+        </svg>
+        <div class="label">Publications & Books (IJSDR)</div>
+      </div>
+      <div class="hire-stat">
+        <div class="num"><span class="counter" data-target="5">5</span><span class="small">+</span></div>
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="9" r="5"></circle>
+          <path d="M8.5 13.5L7 21l5-2.5L17 21l-1.5-7.5"></path>
+        </svg>
+        <div class="label">Years youth leadership</div>
+      </div>
+      <div class="hire-stat">
+        <div class="num"><span class="counter" data-target="10">10</span>K<span class="small">+</span></div>
+        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="9" r="3"></circle>
+          <circle cx="17" cy="10" r="2.4"></circle>
+          <path d="M3 19c0-3 2.7-5 6-5s6 2 6 5"></path>
+          <path d="M14 19c0-2.4 2-4 4-4s3.5 1.6 3.5 4"></path>
+        </svg>
+        <div class="label">Community reach</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH & PUBLICATIONS -->
+  <section class="block" id="research">
+    <div class="block-head reveal">
+      <div class="block-tag mono">RESEARCH & PUBLICATIONS</div>
+      <h2 class="block-title">Papers & Books.</h2>
+    </div>
+    <div class="research-list reveal">
+      <a class="research-row" href="https://www.ijsdr.org/papers/IJSDR2407049.pdf" target="_blank" rel="noreferrer">
+        <span class="yr">2024</span>
+        <span class="ttl">Emergence of Artificial Intelligence in Automobile</span>
+        <span class="desc">Comprehensive analysis on autonomous driving models, predictive telemetry, computer vision safety protocols, and deep neural networks in modern vehicular ecosystems.</span>
+        <span class="venue">IJSDR (Vol. 9)</span>
+        <span class="arrow"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 16 L16 6 M8 6 H16 V14"></path></svg></span>
+      </a>
+      <a class="research-row" href="https://www.ijsdr.org/" target="_blank" rel="noreferrer">
+        <span class="yr">2025</span>
+        <span class="ttl">Agentic AI: Advancing Autonomous Decision Making and Adaptive Intelligence in Complex Systems</span>
+        <span class="desc">Exploring multi-agent architectures, goal-directed planning, and adaptive decision heuristics in complex, safety-critical environments.</span>
+        <span class="venue">IJSDR (Vol. 10)</span>
+        <span class="arrow"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 16 L16 6 M8 6 H16 V14"></path></svg></span>
+      </a>
+      <a class="research-row" href="#" target="_blank" rel="noreferrer">
+        <span class="yr">2024</span>
+        <span class="ttl">Book: Decoding AI — Understanding Algorithms that Shape our World</span>
+        <span class="desc">Published author exploring machine learning algorithms, ethical implications, and practical computational foundations. Sold 200+ copies on Amazon, Kindle & Google Play.</span>
+        <span class="venue">Amazon / Kindle</span>
+        <span class="arrow"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 16 L16 6 M8 6 H16 V14"></path></svg></span>
+      </a>
+      <a class="research-row" href="#" target="_blank" rel="noreferrer">
+        <span class="yr">2024</span>
+        <span class="ttl">Wearable Sensory Glove Translation for Hearing & Speech Impairment</span>
+        <span class="desc">Hardware telemetry, flex calibration, and real-time gesture-to-speech synthesis developed at Teerthanker Mahaveer University.</span>
+        <span class="venue">TMU CCSIT</span>
+        <span class="arrow"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 16 L16 6 M8 6 H16 V14"></path></svg></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="block" id="education">
+    <div class="block-head reveal">
+      <div class="block-tag mono">EDUCATION</div>
+      <h2 class="block-title">Academics.</h2>
+    </div>
+    <div class="schools" style="grid-template-columns: repeat(2, 1fr);">
+      <article class="school reveal">
+        <div class="top">
+          <div class="crest"><span class="mono">LVIS</span></div>
+          <div class="meta"><span class="tag mono">Current · Grade XII</span></div>
+        </div>
+        <div class="name">Lotus Valley International School</div>
+        <div class="loc">Noida, UP, India</div>
+        <div class="years">2010 — Present · Scholar Badge Holder</div>
+        <p style="margin-top: 12px; font-size: 13px; color: var(--text-dim); line-height: 1.5;">Physics, Chemistry, Mathematics, Computer Science & English. Grade X: 92% aggregate · Grade IX: 85% aggregate.</p>
+      </article>
+      <article class="school reveal">
+        <div class="top">
+          <div class="crest"><span class="mono">CSE</span></div>
+          <div class="meta"><span class="tag mono">Undergraduate Target</span></div>
+        </div>
+        <div class="name">Computer Science & Engineering</div>
+        <div class="loc">Global Universities</div>
+        <div class="years">Fall 2026 Entry</div>
+        <p style="margin-top: 12px; font-size: 13px; color: var(--text-dim); line-height: 1.5;">Focusing on Artificial Intelligence, Systems Architecture, Cybersecurity, and Robotics.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS & CREDENTIALS -->
+  <section class="block" id="skills">
+    <div class="block-head reveal">
+      <div class="block-tag mono">SKILLS & CREDENTIALS</div>
+      <h2 class="block-title">Technical toolkit.</h2>
+    </div>
+    <div class="certs">
+      <article class="cert reveal">
+        <div class="cert-top">
+          <div class="issuer mono">Programming</div>
+          <div class="year mono">Core</div>
+        </div>
+        <div class="name">Languages & Frameworks</div>
+        <p class="cert-desc">Object-oriented programming, data structures, algorithms, and computational modeling.</p>
+        <div class="cert-foot">
+          <div class="skills">
+            <span>C++</span><span>Python</span><span>Java</span><span>JavaScript</span><span>HTML/CSS</span><span>React</span>
+          </div>
+        </div>
+      </article>
+      <article class="cert reveal">
+        <div class="cert-top">
+          <div class="issuer mono">Security</div>
+          <div class="year mono">Specialization</div>
+        </div>
+        <div class="name">Cybersecurity & Cryptography</div>
+        <p class="cert-desc">End-to-end cryptographic implementations, threat modeling, and bug notification architectures.</p>
+        <div class="cert-foot">
+          <div class="skills">
+            <span>RSA</span><span>Post-Quantum</span><span>Network Defense</span><span>Vuln Analysis</span>
+          </div>
+        </div>
+      </article>
+      <article class="cert reveal">
+        <div class="cert-top">
+          <div class="issuer mono">Hardware & IoT</div>
+          <div class="year mono">Embedded</div>
+        </div>
+        <div class="name">Robotics & Sensors</div>
+        <p class="cert-desc">Wearable flex sensor arrays, telemetry integration, and modular mechanical prototyping.</p>
+        <div class="cert-foot">
+          <div class="skills">
+            <span>Sensors</span><span>IMU Fusion</span><span>Microcontrollers</span><span>CAD</span>
+          </div>
+        </div>
+      </article>
+      <article class="cert reveal">
+        <div class="cert-top">
+          <div class="issuer mono">CompTIA Standards</div>
+          <div class="year mono">Certified</div>
+        </div>
+        <div class="name">A+ Certification</div>
+        <p class="cert-desc">Core computational systems, computer hardware configuration, network operations, and diagnostics.</p>
+        <div class="cert-foot">
+          <div class="skills">
+            <span>Hardware</span><span>Networking</span><span>Troubleshooting</span>
+          </div>
+        </div>
+      </article>
+      <article class="cert reveal">
+        <div class="cert-top">
+          <div class="issuer mono">Max Mueller Bhawan</div>
+          <div class="year mono">Certified</div>
+        </div>
+        <div class="name">German A2 Certification</div>
+        <p class="cert-desc">Certified German language proficiency; participated in language immersion workshops at Max Mueller Bhawan, Delhi.</p>
+        <div class="cert-foot">
+          <div class="skills">
+            <span>German A2</span><span>Max Mueller</span><span>Language</span>
+          </div>
+        </div>
+      </article>
+      <article class="cert reveal">
+        <div class="cert-top">
+          <div class="issuer mono">Creative & Media</div>
+          <div class="year mono">Software</div>
+        </div>
+        <div class="name">Adobe Creative Cloud</div>
+        <p class="cert-desc">Digital media production, video editing, UI wireframing in Visily/Figma, and photographic post-processing.</p>
+        <div class="cert-foot">
+          <div class="skills">
+            <span>Premiere Pro</span><span>After Effects</span><span>Lightroom</span><span>Figma</span><span>Visily</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP & EXTRACURRICULARS -->
+  <section class="block" id="leadership">
+    <div class="block-head reveal">
+      <div class="block-tag mono">LEADERSHIP & ENGAGEMENT</div>
+      <h2 class="block-title">Impact beyond <em>the code.</em></h2>
+    </div>
+    <div class="leadership-grid">
+      <div class="lead-card reveal">
+        <div class="lead-top">
+          <div class="lead-logo"><span class="mono">AYW</span></div>
+          <div class="lead-role mono">Leader & Founder</div>
+        </div>
+        <div class="lead-name">Aarambh Youth Wing</div>
+        <p class="lead-desc">Established and lead the Youth Wing initiative at Aarambh Trust for Women and Children. Designed promotional digital campaigns, food/relief drives, and community outreach.</p>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-top">
+          <div class="lead-logo"><span class="mono">PHOTO</span></div>
+          <div class="lead-role mono">President</div>
+        </div>
+        <div class="lead-name">School Photography Team</div>
+        <p class="lead-desc">Head of the school photography society, leading event coverage, visual documentation, and mentorship for student photojournalists. Winner of Wildlife Photography Competition.</p>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-top">
+          <div class="lead-logo"><span class="mono">MUSIC</span></div>
+          <div class="lead-role mono">1st Place Winner</div>
+        </div>
+        <div class="lead-name">Drummer & Community Musician</div>
+        <p class="lead-desc">Drummer (2014-Present) in a youth music band for social impact. 1st place in Noida Talent Contest; performed at Adobe Noida, Ashoka University, DLF Mall of India, and Noida Stadium. Received LOR from Noida Development Authority.</p>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-top">
+          <div class="lead-logo"><span class="mono">CODE</span></div>
+          <div class="lead-role mono">District Finalist</div>
+        </div>
+        <div class="lead-name">STEAM Innovation & Codathons</div>
+        <p class="lead-desc">Advanced to district level in STEAM Innovation League. Won 2nd Position in Golden Frame Code-A-Thon; participated in Google Code-A-Thon, Apple Swift Playground, and Technoxian.</p>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-top">
+          <div class="lead-logo"><span class="mono">ARTS</span></div>
+          <div class="lead-role mono">Lead Actor & Host</div>
+        </div>
+        <div class="lead-name">Performing Arts & Theatre</div>
+        <p class="lead-desc">Lead actor in school theatre production (2024), short film contestant, master of ceremonies for major school assemblies, and 1st position in inter-school panel discussion.</p>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-top">
+          <div class="lead-logo"><span class="mono">CORP</span></div>
+          <div class="lead-role mono">Software Intern</div>
+        </div>
+        <div class="lead-name">Priority (USA) & Yahmi</div>
+        <p class="lead-desc">Software development intern contributing bug fixes, product design feedback in Figma/Visily, and software testing across cross-functional teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="block" id="about">
+    <div class="block-head reveal">
+      <div class="block-tag mono">ABOUT</div>
+      <h2 class="block-title">Operator.</h2>
+    </div>
+    <div class="about-grid">
+      <p class="about-bio reveal">
+        Senior in Grade XII at Lotus Valley International School, Noida. I spend my time exploring <em>quantum-resistant cryptography</em>, writing bio-computational sorting models, and building assistive hardware devices. Outside the lab, I lead the Aarambh Youth Wing, produce digital media, and perform drums.
+      </p>
+      <div class="about-meta reveal">
+        <div class="cell"><div class="label">Based</div><div class="val lg">Noida, UP, India</div></div>
+        <div class="cell"><div class="label">Class</div><div class="val lg">Grade XII (PCM + CS)</div></div>
+        <div class="cell"><div class="label">Languages</div><div class="val">C++ · Python · Java · JS · SQL</div></div>
+        <div class="cell"><div class="label">Focus</div><div class="val">Cybersecurity · AI · Quantum · Robotics</div></div>
+        <div class="cell"><div class="label">Leadership</div><div class="val">Aarambh Youth Wing · Photo President</div></div>
+        <div class="cell"><div class="label">Honors</div><div class="val">Scholar Badge · 92% Gr. X · 1st Music</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="block-head reveal">
+      <div class="block-tag mono">CONTACT / INQUIRIES</div>
+      <div></div>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <h2 class="contact-title">Get in <em>touch.</em></h2>
+        <a href="mailto:ekaksh1031@gmail.com" class="contact-mail">
+          ekaksh1031@gmail.com
+          <svg viewBox="0 0 16 16" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 11 L11 5 M6 5 H11 V10"></path></svg>
+        </a>
+
+        <!-- FormSubmit Contact Form -->
+        <form
+          action="https://formsubmit.co/ekaksh1031@gmail.com"
+          method="POST"
+          style="margin-top: 40px; max-width: 520px; display: flex; flex-direction: column; gap: 16px;"
+        >
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_subject" value="New Portfolio Inquiry for Ekaksh Goyal" />
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <input
+              type="text"
+              name="name"
+              placeholder="YOUR NAME"
+              required
+              class="mono"
+              style="background: var(--surface); border: 1px solid var(--line-2); padding: 14px 16px; border-radius: 6px; color: var(--text); font-size: 12px; outline: none;"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="YOUR EMAIL"
+              required
+              class="mono"
+              style="background: var(--surface); border: 1px solid var(--line-2); padding: 14px 16px; border-radius: 6px; color: var(--text); font-size: 12px; outline: none;"
+            />
+          </div>
+
+          <input
+            type="text"
+            name="subject"
+            placeholder="SUBJECT"
+            required
+            class="mono"
+            style="background: var(--surface); border: 1px solid var(--line-2); padding: 14px 16px; border-radius: 6px; color: var(--text); font-size: 12px; outline: none;"
+          />
+
+          <textarea
+            name="message"
+            placeholder="MESSAGE / INQUIRY"
+            rows="4"
+            required
+            class="mono"
+            style="background: var(--surface); border: 1px solid var(--line-2); padding: 14px 16px; border-radius: 6px; color: var(--text); font-size: 12px; outline: none; resize: vertical;"
+          ></textarea>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style="align-self: flex-start; margin-top: 4px; cursor: pointer;"
+          >
+            <span>Send Message</span>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 11 L11 5 M6 5 H11 V10"></path></svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-meta reveal">
+        <div class="field">
+          <div class="label">PHONE</div>
+          <div class="val"><a href="tel:+919910805899">+91 9910805899</a></div>
+        </div>
+        <div class="field">
+          <div class="label">LOCATION</div>
+          <div class="val">South Delhi / Noida, India</div>
+        </div>
+        <div class="field">
+          <div class="label">RESUME</div>
+          <div class="val">
+            <a href="Resume/EkakshGoyal_Resume.pdf" target="_blank" download="EkakshGoyal_Resume.pdf">
+              EkakshGoyal_Resume.pdf ↗
+            </a>
+          </div>
+        </div>
+        <div class="field">
+          <div class="label">LINKEDIN</div>
+          <div class="val">
+            <a href="https://www.linkedin.com/in/ekakshgoyal" target="_blank" rel="noreferrer">
+              /in/ekakshgoyal
+            </a>
+          </div>
+        </div>
+        <div class="field">
+          <div class="label">GITHUB</div>
+          <div class="val">
+            <a href="https://github.com/ekaksh0005" target="_blank" rel="noreferrer">
+              @ekaksh0005
+            </a>
+          </div>
+        </div>
+        <div class="field">
+          <div class="label">LOCAL TIME</div>
+          <div class="val mono" id="liveClock">--:--:-- IST</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>© 2026 · EKAKSH GOYAL</span>
+    <div class="social-row">
+      <a href="https://www.linkedin.com/in/ekakshgoyal" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in" style="font-size: 10px; color: var(--text-dim);"></i>
+      </a>
+      <a href="https://github.com/ekaksh0005" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <i class="fab fa-github" style="font-size: 10px; color: var(--text-dim);"></i>
+      </a>
+      <a href="mailto:ekaksh1031@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope" style="font-size: 10px; color: var(--text-dim);"></i>
+      </a>
+    </div>
+    <span>NOIDA, UP · INDIA</span>
+  </footer>
+
+  <!-- Native Robust Script (Zero external runtime dependencies, 100% reliable) -->
+  <script src="main.js"></script>
 </body>
 </html>
