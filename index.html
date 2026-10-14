@@ -1,392 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ekaksh Goyal - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="scroll-indicator"></div>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ekaksh Goyal · Portfolio</title>
+  <meta name="description" content="Ekaksh Goyal — Computer Science, Cybersecurity & AI builder. Developing quantum-resistant systems, assistive robotics, and machine learning solutions." />
+  <meta name="robots" content="index, follow" />
 
-  <header>
-    <div class="header-content">
-      <div class="profile-container">
-        <div class="profile-picture">
-          <img src="Images/Profile3.jpeg" alt="Ekaksh Goyal">
-        </div>
-      </div>
-      <h1 class="typing-effect">Ekaksh Goyal</h1>
-      <p>Computer Science Enthusiast</p>
-      
-      <div class="header-buttons">
-        <a href="Resume/EkakshGoyal_Resume.pdf" class="button" download>
-          <i class="fas fa-download"></i> Download Resume
-        </a>
-        <button class="toggle-mode" onclick="toggleMode()">
-          <i class="fas fa-moon"></i> Toggle Theme
-        </button>
-      </div>
-    </div>
-  </header>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ekaksh Goyal · Portfolio" />
+  <meta property="og:description" content="Computer Science, Cybersecurity & AI — quantum-resistant encryption, assistive robotics, and intelligent software systems." />
 
-  <nav id="navbar">
-    <a href="#about" class="nav-link active">About</a>
-    <a href="#education" class="nav-link">Education</a>
-    <a href="#experience" class="nav-link">Experience</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="#blogs" class="nav-link">Blogs</a>
-    <a href="#research" class="nav-link">Research</a>
-    <a href="#leadership" class="nav-link">Leadership</a>
-    <a href="#qualifications" class="nav-link">Qualifications</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </nav>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ekaksh Goyal · Portfolio" />
+  <meta name="twitter:description" content="Computer Science, Cybersecurity & AI — quantum-resistant encryption, assistive robotics, and intelligent software systems." />
 
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="section-content">
-      <p>I'm Ekaksh Goyal, a passionate computer science student currently in Grade XII at Lotus Valley International School. With expertise in cybersecurity, data analysis, and programming, I enjoy solving complex problems and building innovative solutions.</p>
-      <p>My interests span across artificial intelligence, cybersecurity, software development, and digital marketing. I'm constantly exploring new technologies and looking for opportunities to expand my knowledge and skills.</p>
-      <p>Beyond technical skills, I'm also deeply committed to social causes through my work with Aarambh Trust, where I founded and lead the Youth Wing initiative. I'm an avid musician, public speaker, and enjoy participating in various competitions and events.</p>
-      
-      <div class="gallery">
-        <div class="gallery-item">
-          <img src="Images/Volunteering.jpeg" alt="Ekaksh Goyal volunteering">
-        </div>
-        <div class="gallery-item">
-          <img src="Images/Camera.jpeg" alt="Ekaksh Goyal formal">
-        </div>
-        <div class="gallery-item">
-          <img src="Images/Comp.jpeg" alt="Ekaksh Goyal portrait">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education-item" data-aos="fade-up">
-      <h3><i class="fas fa-graduation-cap"></i> Lotus Valley International School, Noida</h3>
-      <p><em>May 2010 - Present</em></p>
-      <ul>
-        <li>Currently in Grade XII - Physics, Chemistry, Mathematics, Computer Science, and English</li>
-        <li>Academic Performance: Grade IX (85% aggregate), Grade X (92% aggregate)</li>
-        <li>Scholar Badge Holder in Grade VIII</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="experience-item" data-aos="fade-right">
-      <h3><i class="fas fa-shield-alt"></i> Cybersecurity and Data Analyst Intern - TMU University, Moradabad, UP</h3>
-      <p><em>March 2024 - June 2024</em></p>
-      <ul>
-        <li>Developed a buggy application under the guidance of Dr. Rakesh Dwivedi, Head of CCSIT</li>
-        <li>Worked as a data analyst and created a sign language glove for hearing and speech-impaired individuals</li>
-      </ul>
-    </div>
-    <div class="experience-item" data-aos="fade-left">
-      <h3><i class="fas fa-bullhorn"></i> Digital Marketing Intern - Jitin Chawla's Centre for Career Development, Delhi</h3>
-      <p><em>May 2024</em></p>
-      <ul>
-        <li>Achieved 100% reach growth on social platforms including Facebook and Instagram</li>
-        <li>Published research paper on Artificial Intelligence in the automotive industry</li>
-      </ul>
-    </div>
-    <div class="experience-item" data-aos="fade-right">
-      <h3><i class="fas fa-users"></i> Leader and Volunteer - Aarambh Trust for Women and Children, Delhi</h3>
-      <p><em>2019 - Present</em></p>
-      <ul>
-        <li>Established and currently lead the Aarambh Youth Wing initiative</li>
-        <li>Designed creative and promotional materials as a digital marketing intern</li>
-      </ul>
-    </div>
-    <div class="experience-item" data-aos="fade-left">
-      <h3><i class="fas fa-chart-line"></i> Digital Marketing Intern - SAAR Education Pvt. Ltd., Noida, UP</h3>
-      <p><em>May 2023 - June 2023</em></p>
-      <ul>
-        <li>Gained valuable insights into human resource development and digital marketing</li>
-        <li>Collaborated with educational organization focused on innovative teaching methods</li>
-      </ul>
-    </div>
-
-    <div class="experience-item" data-aos="fade-left">
-      <h3><i class="fas fa-chart-line"></i> Software Intern - Priority, Minnesota, USA</h3>
-      <p><em>June 2024 - August 2024</em></p>
-      <ul>
-        <li>Assisted with software development tasks (bug fixing, implementation support).
-            Contribute to design ideas and product improvement discussions.</li>
-        <li>Conduct testing and submit bug reports and feedback.</li>
-      </ul>
-    </div>   
-    
-    <div class="experience-item" data-aos="fade-left">
-      <h3><i class="fas fa-chart-line"></i> Software Intern - Yahmi, Delhi</h3>
-      <p><em>June 2024 - August 2024</em></p>
-      <ul>
-        <li>Developed the Yahmi app with the tech team and gained a lot of insight and experience in Visily and Figma during the internship period.</li>
-        <li>Conduct testing and submit bug reports and feedback.</li>
-      </ul>
-    </div> 
-  </section>
-
-  <section id="projects">
-  <h2>Projects</h2>
-  <div class="projects-grid">
-    <div class="project-item" data-aos="zoom-in">
-      <h3><i class="fas fa-dna"></i> Vriti - Protein Folding Quantum Analysis AI</h3>
-      <p>Leveraged AI and quantum sorting algorithms to predict protein structures for accelerated vaccine development...</p>
-      <div class="project-actions">
-        <a href="projects/vriti.html" class="button learn-more">
-          <i class="fas fa-arrow-right"></i> Learn More
-        </a>
-      </div>
-    </div>
-
-    <div class="project-item" data-aos="zoom-in">
-      <h3><i class="fas fa-dna"></i> P.E.R.C.Y (Modular Attachment Car Kit)</h3>
-      <p>Designed modular attachment converting regular cars into amphibious vehicles for flood situations. Implemented inflatable structures, depth sensors, and specialized wheels for water navigation.</p>
-      <div class="project-actions">
-        <a href="projects/percy.html" class="button learn-more">
-          <i class="fas fa-arrow-right"></i> Learn More
-        </a>
-      </div>
-    </div>
-
-    <div class="project-item" data-aos="zoom-in">
-      <h3><i class="fas fa-dna"></i> Kavach</h3>
-      <p>Developed RSA Encryption software designed to maintain security against quantum computing attacks. Created end-to-end encrypted chat system resistant to quantum decryption methods.</p>
-      <div class="project-actions">
-        <a href="projects/cryptic.html" class="button learn-more">
-          <i class="fas fa-arrow-right"></i> Learn More
-        </a>
-      </div>
-    </div>
+  <!-- Typography matching chahel.tech -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   
-    <div class="project-item" data-aos="zoom-in">
-      <h3><i class="fas fa-dna"></i> F1 Pokedex</h3>
-      <p>Built a comprehensive Python program containing detailed Formula 1 information database. Implemented a Pokédex-style interface allowing users to access and query F1 data efficiently.</p>
-      <div class="project-actions">
-        <a href="projects/F1 Hub.html" class="button learn-more">
-          <i class="fas fa-arrow-right"></i> Learn More
-        </a>
-      </div>
-    </div>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <div class="project-item" data-aos="zoom-in">
-      <h3><i class="fas fa-dna"></i> Hand Gesture Recognition System</h3>
-      <p>Developed technology to interpret hand gestures and convert them into actionable commands. Utilized computer vision techniques to accurately recognize and classify different gesture patterns.</p>
-      <div class="project-actions">
-        <a href="projects/Gesture.html" class="button learn-more">
-          <i class="fas fa-arrow-right"></i> Learn More
-        </a>
-      </div>
-    </div>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: rgb(10, 10, 12); font-family: 'Geist', sans-serif" data-screen-label="Portfolio · Main">
+  <div id="root"></div>
 
-    <div class="project-item" data-aos="zoom-in">
-      <h3><i class="fas fa-dna"></i> Aarambh Website</h3>
-      <p>Designed and developed the official website for Aarambh Trust for Women and Children. Implemented donation links and management system using C++, HTML, SQL and WordPress.</p>
-      <div class="project-actions">
-        <a href="projects/Aarambh.html" class="button learn-more">
-          <i class="fas fa-arrow-right"></i> Learn More
-        </a>
-      </div>
-    </div>
+  <!-- React 18, ReactDOM 18 & Babel Standalone (matching chahel.tech architecture) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
-    <div class="project-item" data-aos="zoom-in">
-      <h3><i class="fas fa-dna"></i> Buggy App</h3>
-      <p>Created an application that provides notifications about software bugs and vulnerability alerts. Designed user-friendly interface to display real-time bug detection and resolution status.</p>
-      <div class="project-actions">
-        <a href="projects/buggy.html" class="button learn-more">
-          <i class="fas fa-arrow-right"></i> Learn More
-        </a>
-      </div>
-    </div>
-
-     <div class="project-item" data-aos="zoom-in">
-      <h3><i class="fas fa-dna"></i> Sign Language Glove</h3>
-      <p>Engineered a wearable device that translates sign language gestures into text and speech output. Designed to assist communication for deaf and mute individuals in everyday situations.</p>
-      <div class="project-actions">
-        <a href="projects/glove.html" class="button learn-more">
-          <i class="fas fa-arrow-right"></i> Learn More
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-        
-        <section id="skills">
-          <h2>Skills</h2>
-          <div class="skills-container">
-            <div class="skill-item" data-aos="fade-up">
-              <h3><i class="fas fa-code"></i> Programming Languages</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">C++</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">HTML</span>
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">JavaScript</span>
-              </div>
-            </div>
-            <div class="skill-item" data-aos="fade-up">
-              <h3><i class="fas fa-laptop-code"></i> Software</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">Adobe Premiere Pro</span>
-                <span class="skill-tag">Adobe After Effects</span>
-                <span class="skill-tag">Adobe Lightroom</span>
-                <span class="skill-tag">Microsoft Office</span>
-              </div>
-            </div>
-            <div class="skill-item" data-aos="fade-up">
-              <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">MySQL</span>
-                <span class="skill-tag">Github</span>
-                <span class="skill-tag">Windows</span>
-                <span class="skill-tag">MacOS</span>
-                <span class="skill-tag">Linux</span>
-              </div>
-            </div>
-            <div class="skill-item" data-aos="fade-up">
-              <h3><i class="fas fa-certificate"></i> Certifications</h3>
-              <div class="skill-tags">
-                <span class="skill-tag">A+ Certified</span>
-                <span class="skill-tag">HTML</span>
-                <span class="skill-tag">Scratch</span>
-                <span class="skill-tag">Python</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="research">
-          <h2>Research & Publications</h2>
-          <div class="publication-item" data-aos="fade-up">
-            <h3><i class="fas fa-file-alt"></i> Emergence of Artificial Intelligence in Automobile</h3>
-            <p>Published in the International Journal of Scientific Development and Research (IJSDR), July 2024</p>
-            <a href="https://www.ijsdr.org/papers/IJSDR2407049.pdf" target="_blank" class="button">
-              <i class="fas fa-external-link-alt"></i> View Research Paper
-            </a>
-          </div>
-        </section>
-
-        <section id="leadership">
-          <h2>Leadership & Extracurricular Activities</h2>
-          <div class="leadership-item" data-aos="fade-right">
-            <h3><i class="fas fa-crown"></i> Leadership Roles</h3>
-            <ul>
-              <li>Leader of Aarambh Youth Wing</li>
-              <li>President of School Photography Team</li>
-            </ul>
-          </div>
-          <div class="leadership-item" data-aos="fade-left">
-            <h3><i class="fas fa-drum"></i> Music</h3>
-            <ul>
-              <li>Drummer (2014-2023) with community band in Noida</li>
-              <li>First-place winner in Noida's Talent Contest</li>
-              <li>Performed at Adobe Noida, Ashoka University, Noida Stadium, and DLF Mall of India</li>
-            </ul>
-          </div>
-          <div class="leadership-item" data-aos="fade-right">
-            <h3><i class="fas fa-trophy"></i> Competitions</h3>
-            <ul>
-              <li>Advanced to district level in STEAM Innovation League (global AI and robotics competition)</li>
-              <li>Participated in Google Code-A-Thon, Apple's Swift Playground Challenge, Technoxian Code-A-Thon</li>
-              <li>Won 2nd Position in Golden Frame Code-A-Thon at Lotus Valley International School</li>
-            </ul>
-          </div>
-          <div class="leadership-item" data-aos="fade-left">
-            <h3><i class="fas fa-theater-masks"></i> Performing Arts</h3>
-            <ul>
-              <li>Lead actor in school theatre performance (2024)</li>
-              <li>Represented school at Short Film contest</li>
-              <li>Host for numerous school assemblies and events</li>
-              <li>Participant in street plays raising awareness about social issues</li>
-              <li>First Position in inter-school Panel Discussion</li>
-            </ul>
-          </div>
-        </section>
-
-        <section id="qualifications">
-          <h2>Additional Qualifications</h2>
-          <div class="qualification-item" data-aos="fade-up">
-            <h3><i class="fas fa-medal"></i> Achievements & Certifications</h3>
-            <ul>
-              <li>A2 Certification in German; attended workshops at Max Muller Bhawan, Delhi</li>
-              <li>Received LOR from Noida Development Authority for performing music for cancer patients</li>
-              <li>Member of school table tennis team and interaction club</li>
-            </ul>
-          </div>
-        </section>
-
-        <section id="contact">
-  <h2>Contact</h2>
-  <div class="section-content">
-    <div class="contact-form" data-aos="zoom-in">
-      <form action="https://formsubmit.co/ekaksh1031@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Submission from Your Website!">
-        <input type="hidden" name="_template" value="table">
-        
-        <div class="form-group">
-          <label for="name"><i class="fas fa-user"></i> Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email"><i class="fas fa-envelope"></i> Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="subject"><i class="fas fa-heading"></i> Subject</label>
-          <input type="text" id="subject" name="subject" required>
-        </div>
-        <div class="form-group">
-          <label for="message"><i class="fas fa-comment"></i> Message</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit" class="form-submit">
-          <i class="fas fa-paper-plane"></i> Send Message
-        </button>
-      </form>
-      <div id="form-response" style="margin-top: 1rem;"></div>
-    </div>
-  </div>
-</section>
-            
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/ekakshgoyal" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="https://github.com/ekaksh0005" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="mailto:ekaksh1031@gmail.com" title="Email">
-                <i class="fas fa-envelope"></i>
-              </a>
-              <a href="#" title="Instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <button class="scroll-top" onclick="scrollToTop()">
-          <i class="fas fa-arrow-up"></i>
-        </button>
-
-        <footer>
-          <div class="footer-content">
-            <p>&copy; 2025 Ekaksh Goyal. All rights reserved.</p>
-            <p>Computer Science Enthusiast</p>
-          </div>
-        </footer>
-
-        <script src="main.js"></script>
-      </body>
-      </html>
-
-      
+  <!-- Complete Site Code in main.js -->
+  <script type="text/babel" src="main.js"></script>
+</body>
+</html>
