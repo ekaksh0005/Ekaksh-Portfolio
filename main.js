@@ -261,11 +261,10 @@ function initVritiSimulation() {
       const e = (-410 - Math.sin(frame * 0.05) * 6.5).toFixed(1);
       const s = 104 + (frame % 200);
       const r = (0.17 + Math.sin(frame * 0.02) * 0.03).toFixed(2);
-      telemetryEl.innerHTML = `
-        <span>ΔE: <strong style="color: var(--accent);">${e} kcal/mol</strong></span>
-        <span>RMSD: <strong style="color: var(--text);">${r} Å</strong></span>
-        <span>ITER: <strong style="color: var(--text-mute);">${s}</strong></span>
-      `;
+      telemetryEl.innerHTML =
+        '<span>ΔE: <strong style="color:var(--accent);">' + e + ' kcal/mol</strong></span> ' +
+        '<span>RMSD: <strong style="color:var(--text);">' + r + ' Å</strong></span> ' +
+        '<span>ITER: <strong style="color:var(--text-mute);">' + s + '</strong></span>';
     }
 
     requestAnimationFrame(render);
@@ -298,4 +297,123 @@ function initKavachTerminal() {
   let idx = 4;
 
   setInterval(() => {
-    current
+    currentLogs = [...currentLogs.slice(1), logs[idx]];
+    idx = (idx + 1) % logs.length;
+    consoleEl.innerHTML = currentLogs
+      .map(function (log, i) {
+        var col = i === currentLogs.length - 1 ? "var(--accent)" : "var(--text-dim)";
+        return '<div style="color:' + col + ';white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' +
+               '<span style="opacity:0.5;margin-right:6px;">›</span>' + log + '</div>';
+      })
+      .join("");
+  }, 1300);
+}
+
+/* ---------------------------------------------------------------------
+   7. SIGN LANGUAGE GLOVE FLEX TELEMETRY & TTS AUDIO STREAM
+   --------------------------------------------------------------------- */
+function initGloveTelemetry() {
+  const fingersEl = document.getElementById("gloveFingers");
+  const speechEl = document.getElementById("gloveSpeechText");
+  if (!fingersEl || !speechEl) return;
+
+  const fingerLabels = ["THUMB", "INDEX", "MIDDLE", "RING", "PINKY"];
+  const gestures = [
+    "HELLO / WELCOME",
+    "ASSISTANCE NEEDED",
+    "THANK YOU",
+    "WATER PLEASE",
+    "I AM SAFE"
+  ];
+
+  function updateMeters() {
+    const angles = [
+      Math.floor(40 + Math.random() * 55),
+      Math.floor(40 + Math.random() * 55),
+      Math.floor(40 + Math.random() * 55),
+      Math.floor(40 + Math.random() * 55),
+      Math.floor(30 + Math.random() * 60)
+    ];
+
+    fingersEl.innerHTML = angles
+      .map(function (ang, i) {
+        return '<div style="display:grid;grid-template-columns:55px 1fr 35px;align-items:center;gap:10px;font-size:10px;" class="mono">' +
+               '<span style="color:var(--text-dim);">' + fingerLabels[i] + '</span>' +
+               '<div style="height:5px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;">' +
+               '<div style="width:' + ang + '%;height:100%;background:linear-gradient(90deg,var(--accent),#e08030);transition:width 0.4s ease;"></div>' +
+               '</div>' +
+               '<span style="color:var(--text);text-align:right;">' + ang + '°</span>' +
+               '</div>';
+      })
+      .join("");
+  }
+
+  updateMeters();
+  let gIdx = 0;
+  setInterval(() => {
+    gIdx = (gIdx + 1) % gestures.length;
+    speechEl.textContent = gestures[gIdx];
+    updateMeters();
+  }, 1800);
+}
+
+/* ---------------------------------------------------------------------
+   8. EASING STAT COUNTERS (10+, 3, 5+, 10K+)
+   --------------------------------------------------------------------- */
+function initStatCounters() {
+  const counters = document.querySelectorAll(".counter");
+  if (!counters.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.getAttribute("data-target") || "0", 10);
+          const duration = 1200;
+          const start = performance.now();
+
+          const step = (now) => {
+            const t = Math.min(1, (now - start) / duration);
+            const ease = 1 - Math.pow(1 - t, 3);
+            el.textContent = Math.round(ease * target);
+            if (t < 1) requestAnimationFrame(step);
+            else el.textContent = target;
+          };
+
+          requestAnimationFrame(step);
+          observer.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  counters.forEach((c) => observer.observe(c));
+}
+
+/* ---------------------------------------------------------------------
+   9. LIVE INDIAN STANDARD TIME (IST) CLOCK
+   --------------------------------------------------------------------- */
+function initLiveClock() {
+  const clockEl = document.getElementById("liveClock");
+  if (!clockEl) return;
+
+  const tick = () => {
+    try {
+      clockEl.textContent =
+        new Date().toLocaleTimeString("en-US", {
+          timeZone: "Asia/Kolkata",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false
+        }) + " IST";
+    } catch {
+      clockEl.textContent = "--:--:-- IST";
+    }
+  };
+
+  tick();
+  setInterval(tick, 1000);
+}
