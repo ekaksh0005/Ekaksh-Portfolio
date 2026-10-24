@@ -84,16 +84,8 @@
     <div class="hero-right">
       <div class="portrait-stage" id="portraitStage">
         <div class="portrait-frame" id="portraitFrame">
-          <!-- Geometric Avatar -->
-          <div style="position: absolute; inset: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 40%, rgba(91, 177, 232, 0.12) 0%, rgba(10, 10, 12, 0.95) 70%);">
-            <svg viewBox="0 0 200 200" style="width: 60%; height: 60%; color: var(--accent); opacity: 0.85;">
-              <polygon points="100,20 170,80 140,165 60,165 30,80" fill="none" stroke="currentColor" stroke-width="1.5" />
-              <circle cx="100" cy="95" r="32" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3,3" />
-              <line x1="100" y1="20" x2="100" y2="165" stroke="currentColor" stroke-width="0.75" opacity="0.4" />
-              <line x1="30" y1="80" x2="170" y2="80" stroke="currentColor" stroke-width="0.75" opacity="0.4" />
-              <circle cx="100" cy="95" r="4" fill="currentColor" />
-            </svg>
-          </div>
+          <!-- Ekaksh Goyal Portrait -->
+          <img src="Images/Profile3.jpeg" alt="Ekaksh Goyal" class="portrait-img" style="object-position: center 25%;" />
           <div class="portrait-veil"></div>
           <div class="portrait-corner tl"></div>
           <div class="portrait-corner tr"></div>
@@ -142,7 +134,7 @@
     <div class="projects">
       
       <!-- Project 1: Vriti -->
-      <article class="project span-7 reveal" id="cardVriti" style="cursor: pointer;" onclick="if(!event.target.closest('a')) window.location.href='vriti.html';">
+      <article class="project span-7 reveal" id="cardVriti" style="cursor: pointer;" onclick="if(!event.target.closest('a')) window.location.href='projects/vriti.html';">
         <div class="row">
           <span class="num">01 / BIO-AI &amp; QUANTUM</span>
           <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
@@ -154,7 +146,7 @@
         
         <!-- Embedded 3D Protein Structure Visual -->
         <div class="visual" style="min-height: 400px; position: relative; background: radial-gradient(circle at center, rgba(91, 177, 232, 0.12) 0%, rgba(10, 10, 12, 0.8) 75%); border: 1px solid var(--line-2); border-radius: 6px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-          <a href="vriti.html" style="position: absolute; inset: 0; z-index: 10;" aria-label="Open Project Vriti Case Study"></a>
+          <a href="projects/vriti.html" style="position: absolute; inset: 0; z-index: 10;" aria-label="Open Project Vriti Case Study"></a>
           
           <!-- Protein Structure Ribbon Image -->
           <img src="Images/vriti/sars_cov2_spike_transparent.png" alt="SARS-CoV-2 Spike Protein 3D Predicted Structure" style="max-width: 82%; max-height: 82%; object-fit: contain; filter: drop-shadow(0 0 24px rgba(91, 177, 232, 0.4)); transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1); z-index: 2;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" />
@@ -176,7 +168,7 @@
         </div>
 
         <div class="name">
-          <a href="vriti.html" class="project-link" style="display: inline-flex; align-items: baseline; gap: 8px;">
+          <a href="projects/vriti.html" class="project-link" style="display: inline-flex; align-items: baseline; gap: 8px;">
             Vriti <span style="font-size: 0.55em; font-family: 'Instrument Serif', serif; color: var(--text-dim); font-weight: 400;">(वृत्ति)</span>
             <i class="fas fa-arrow-up-right-from-square" style="font-size: 14px; color: var(--accent); opacity: 0.85;"></i>
           </a>
@@ -207,7 +199,7 @@
 
         <!-- Dedicated CTA Button to Vriti Case Study Page -->
         <div style="margin-top: 22px;">
-          <a href="vriti.html" class="btn btn-ghost mono" style="font-size: 12px; padding: 10px 18px; border-color: var(--accent-line); color: var(--accent); display: inline-flex; align-items: center; gap: 8px;">
+          <a href="projects/vriti.html" class="btn btn-ghost mono" style="font-size: 12px; padding: 10px 18px; border-color: var(--accent-line); color: var(--accent); display: inline-flex; align-items: center; gap: 8px;">
             <span>VIEW VRITI RESEARCH DOCS &amp; CASE STUDY</span>
             <i class="fas fa-arrow-right"></i>
           </a>
@@ -215,14 +207,15 @@
       </article>
 
       <!-- Project 2: Kavach -->
-      <article class="project span-5 reveal theme-violet" id="cardKavach">
+      <article class="project span-5 reveal theme-violet" id="cardKavach" style="cursor: pointer;" onclick="if(!event.target.closest('a')) window.location.href='projects/kavach.html';">
         <div class="row">
           <span class="num">02 / CRYPTO</span>
           <div style="display: flex; gap: 8px; align-items: center;">
-            <span class="status live">Post-Quantum</span>
+            <span class="status live" style="color: #bb86fc; border-color: rgba(160, 100, 255, 0.4);">Post-Quantum</span>
           </div>
         </div>
-        <div class="visual">
+        <div class="visual" style="position: relative;">
+          <a href="projects/kavach.html" style="position: absolute; inset: 0; z-index: 10;" aria-label="Open Project Kavach Case Study"></a>
           <div class="viz-fdir" style="width: 100%; height: 100%;">
             <div class="panel" style="width: 100%; max-width: 380px; padding: 18px 20px;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
@@ -246,7 +239,12 @@
             </div>
           </div>
         </div>
-        <div class="name">Kavach</div>
+        <div class="name">
+          <a href="projects/kavach.html" class="project-link" style="display: inline-flex; align-items: baseline; gap: 8px;">
+            Kavach <span style="font-size: 0.55em; font-family: 'Instrument Serif', serif; color: var(--text-dim); font-weight: 400;">(कवच)</span>
+            <i class="fas fa-arrow-up-right-from-square" style="font-size: 14px; color: #bb86fc; opacity: 0.85;"></i>
+          </a>
+        </div>
         <div class="sub mono">Quantum-Resistant RSA Suite</div>
         <p class="desc">Advanced encryption software engineered to resist quantum decryption attacks. Features end-to-end encrypted messaging resistant to Shor's algorithm via hybrid lattice key wrapping.</p>
         <div class="tags">
@@ -255,17 +253,25 @@
           <span class="mono">Security</span>
           <span class="mono">Python</span>
         </div>
+        <div style="margin-top: 22px;">
+          <a href="projects/kavach.html" class="btn btn-ghost mono" style="font-size: 12px; padding: 10px 18px; border-color: rgba(187, 134, 252, 0.4); color: #bb86fc; display: inline-flex; align-items: center; gap: 8px;">
+            <span>VIEW PQC ARCHITECTURE &amp; DOCS</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
       </article>
 
       <!-- Project 3: P.E.R.C.Y -->
-      <article class="project span-5 reveal theme-orange" id="cardPercy">
+      <article class="project span-5 reveal theme-orange" id="cardPercy" style="cursor: pointer;" onclick="if(!event.target.closest('a')) window.location.href='projects/percy.html';">
         <div class="row">
           <span class="num">03 / HARDWARE</span>
-          <div style="display: flex; gap: 8px; align-items: center;">
-            <span class="status r">Modular Prototype</span>
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <span class="status live" style="color: #ffd060; border-color: rgba(255, 190, 40, 0.4);"><i class="fas fa-trophy" style="font-size: 9px; margin-right: 4px;"></i> ATL Marathon Finalist</span>
+            <span class="status live" style="color: #ff8a4c; border-color: rgba(255, 138, 76, 0.4);"><i class="fas fa-award" style="font-size: 9px; margin-right: 4px;"></i> NID Haryana 2nd</span>
           </div>
         </div>
-        <div class="visual">
+        <div class="visual" style="position: relative;">
+          <a href="projects/percy.html" style="position: absolute; inset: 0; z-index: 10;" aria-label="Open Project PERCY Case Study"></a>
           <div class="drone3d" style="width: 100%; height: 100%;">
             <div class="drone3d-stage" style="transform: rotateX(58deg) rotateZ(-28deg);">
               <div class="drone-grid"></div>
@@ -284,7 +290,11 @@
             <div class="stl-hint mono" style="position: absolute; bottom: 12px; left: 16px;">FLOATATION DEPLOYED · DEPTH SENSOR ACTIVE</div>
           </div>
         </div>
-        <div class="name">P.E.R.C.Y</div>
+        <div class="name">
+          <a href="projects/percy.html" class="project-link" style="display: inline-flex; align-items: baseline; gap: 8px;">
+            P.E.R.C.Y <i class="fas fa-arrow-up-right-from-square" style="font-size: 14px; color: #ff8a4c; opacity: 0.85;"></i>
+          </a>
+        </div>
         <div class="sub mono">Modular Amphibious Vehicle Kit</div>
         <p class="desc">Designed a modular attachment system converting standard civilian automobiles into amphibious rescue crafts for severe flood emergencies. Features automated pontoons, depth sensors, and specialized propulsion.</p>
         <div class="tags">
@@ -293,17 +303,25 @@
           <span class="mono">Disaster Relief</span>
           <span class="mono">C++</span>
         </div>
+        <div style="margin-top: 22px;">
+          <a href="projects/percy.html" class="btn btn-ghost mono" style="font-size: 12px; padding: 10px 18px; border-color: rgba(224, 128, 48, 0.4); color: #ff8a4c; display: inline-flex; align-items: center; gap: 8px;">
+            <span>VIEW PROTOTYPE VIDEO &amp; SPECS</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
       </article>
 
       <!-- Project 4: Sign Language Glove -->
-      <article class="project span-7 reveal theme-red" id="cardGlove">
+      <article class="project span-7 reveal theme-red" id="cardGlove" style="cursor: pointer;" onclick="if(!event.target.closest('a')) window.location.href='projects/glove.html';">
         <div class="row">
           <span class="num">04 / ASSISTIVE TECH</span>
-          <div style="display: flex; gap: 8px; align-items: center;">
-            <span class="status live">Working Hardware</span>
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <span class="status live" style="color: #ff6e6e; border-color: rgba(255, 90, 90, 0.4);">Working Hardware</span>
+            <span class="status live" style="color: var(--accent); border-color: var(--accent-line);">TMU Research Lab</span>
           </div>
         </div>
-        <div class="visual">
+        <div class="visual" style="position: relative;">
+          <a href="projects/glove.html" style="position: absolute; inset: 0; z-index: 10;" aria-label="Open Sign Language Glove Case Study"></a>
           <div class="viz-aether" style="width: 100%; height: 100%; position: relative;">
             <div style="width: 100%; max-width: 400px; background: rgba(16, 16, 20, 0.85); border: 1px solid var(--line-2); border-radius: 6px; padding: 20px;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
@@ -320,7 +338,11 @@
             </div>
           </div>
         </div>
-        <div class="name">Sign Language Glove</div>
+        <div class="name">
+          <a href="projects/glove.html" class="project-link" style="display: inline-flex; align-items: baseline; gap: 8px;">
+            Sign Language Glove <i class="fas fa-arrow-up-right-from-square" style="font-size: 14px; color: #ff6e6e; opacity: 0.85;"></i>
+          </a>
+        </div>
         <div class="sub mono">Assistive Flex Telemetry Wearable</div>
         <p class="desc">A sensory hardware glove utilizing flex angle sensors to translate Indian and American Sign Language gestures into clear synthesized vocal speech and synchronized smartphone display notifications.</p>
         <div class="tags">
@@ -329,17 +351,25 @@
           <span class="mono">Sensors</span>
           <span class="mono">Assistive Tech</span>
         </div>
+        <div style="margin-top: 22px;">
+          <a href="projects/glove.html" class="btn btn-ghost mono" style="font-size: 12px; padding: 10px 18px; border-color: rgba(255, 90, 90, 0.4); color: #ff6e6e; display: inline-flex; align-items: center; gap: 8px;">
+            <span>VIEW HARDWARE &amp; SENSOR DOCS</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
       </article>
 
       <!-- Project 5: F1 Pokedex -->
-      <article class="project span-6 reveal theme-orange" id="cardF1">
+      <article class="project span-6 reveal theme-orange" id="cardF1" style="cursor: pointer;" onclick="if(!event.target.closest('a')) window.location.href='projects/F1 Hub.html';">
         <div class="row">
           <span class="num">05 / DATA &amp; WEB</span>
-          <div style="display: flex; gap: 8px; align-items: center;">
-            <span class="status live">Active App</span>
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <span class="status live" style="color: #ff8a4c; border-color: rgba(255, 138, 76, 0.4);">FastF1 Engine</span>
+            <span class="status live" style="color: var(--accent); border-color: var(--accent-line);">Python &amp; SQLite</span>
           </div>
         </div>
-        <div class="visual">
+        <div class="visual" style="position: relative;">
+          <a href="projects/F1 Hub.html" style="position: absolute; inset: 0; z-index: 10;" aria-label="Open F1 Pokedex Case Study"></a>
           <div class="viz-gauss" style="width: 100%; height: 100%;">
             <div class="editor" style="width: 100%; max-width: 420px;">
               <div class="editor-bar">
@@ -357,7 +387,11 @@
             </div>
           </div>
         </div>
-        <div class="name">F1 Pokedex</div>
+        <div class="name">
+          <a href="projects/F1 Hub.html" class="project-link" style="display: inline-flex; align-items: baseline; gap: 8px;">
+            F1 Pokedex <i class="fas fa-arrow-up-right-from-square" style="font-size: 14px; color: #ff8a4c; opacity: 0.85;"></i>
+          </a>
+        </div>
         <div class="sub mono">Formula 1 Telemetry &amp; Driver Database</div>
         <p class="desc">A specialized high-speed database cataloging Formula 1 driver telemetry, historical race records, lap deltas, and car mechanical specifications powered by Python and data visualization libraries.</p>
         <div class="tags">
@@ -366,17 +400,25 @@
           <span class="mono">FastF1</span>
           <span class="mono">SQL</span>
         </div>
+        <div style="margin-top: 22px;">
+          <a href="projects/F1 Hub.html" class="btn btn-ghost mono" style="font-size: 12px; padding: 10px 18px; border-color: rgba(255, 138, 76, 0.4); color: #ff8a4c; display: inline-flex; align-items: center; gap: 8px;">
+            <span>VIEW TELEMETRY &amp; DATABASE</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
       </article>
 
       <!-- Project 6: Buggy App -->
-      <article class="project span-6 reveal theme-red" id="cardBuggy">
+      <article class="project span-6 reveal theme-red" id="cardBuggy" style="cursor: pointer;" onclick="if(!event.target.closest('a')) window.location.href='projects/buggy.html';">
         <div class="row">
           <span class="num">06 / APPLICATION</span>
-          <div style="display: flex; gap: 8px; align-items: center;">
-            <span class="status live">Shipped</span>
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <span class="status live" style="color: #ff6e6e; border-color: rgba(255, 90, 90, 0.4);">CVE Radar Active</span>
+            <span class="status live" style="color: var(--accent); border-color: var(--accent-line);">DevSecOps</span>
           </div>
         </div>
-        <div class="visual">
+        <div class="visual" style="position: relative;">
+          <a href="projects/buggy.html" style="position: absolute; inset: 0; z-index: 10;" aria-label="Open Buggy App Case Study"></a>
           <div class="viz-sauron" style="width: 100%; height: 100%;">
             <div class="grid" style="width: 320px; height: 160px; border: 1px solid var(--line-2); background: rgba(10, 10, 12, 0.7); border-radius: 6px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
               <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -394,7 +436,11 @@
             </div>
           </div>
         </div>
-        <div class="name">Buggy App</div>
+        <div class="name">
+          <a href="projects/buggy.html" class="project-link" style="display: inline-flex; align-items: baseline; gap: 8px;">
+            Buggy App <i class="fas fa-arrow-up-right-from-square" style="font-size: 14px; color: #ff6e6e; opacity: 0.85;"></i>
+          </a>
+        </div>
         <div class="sub mono">Vulnerability Tracker &amp; Security Advisories</div>
         <p class="desc">A developer security tool that monitors, flags, and alerts engineers about active codebase vulnerabilities, outdated dependencies, and zero-day threat exposures across integrated repositories.</p>
         <div class="tags">
@@ -402,6 +448,12 @@
           <span class="mono">CVE Scraper</span>
           <span class="mono">DevSecOps</span>
           <span class="mono">API</span>
+        </div>
+        <div style="margin-top: 22px;">
+          <a href="projects/buggy.html" class="btn btn-ghost mono" style="font-size: 12px; padding: 10px 18px; border-color: rgba(255, 90, 90, 0.4); color: #ff6e6e; display: inline-flex; align-items: center; gap: 8px;">
+            <span>VIEW VULNERABILITY RADAR</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </article>
 
@@ -411,11 +463,24 @@
   <!-- RESEARCH & PUBLICATIONS -->
   <section class="block" id="research">
     <div class="block-head reveal">
-      <div class="block-tag mono">PUBLICATIONS &amp; RESEARCH / 02</div>
+      <div class="block-tag mono">PUBLICATIONS &amp; RESEARCH / 04</div>
       <h2 class="block-title">Investigating systems, <em>empirically.</em></h2>
     </div>
 
     <div class="research-list">
+      <article class="research-row reveal">
+        <span class="yr mono">2024</span>
+        <div class="ttl">Decoding AI: The Mathematical Architecture of Machine Intelligence</div>
+        <div class="desc">Published foundational book demystifying neural network representations, transformer attention heads, and the emergence of autonomous Agentic AI systems for developers and researchers.</div>
+        <div class="venue mono">PUBLISHED BOOK</div>
+        <div class="arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </article>
+
       <article class="research-row reveal">
         <span class="yr mono">2024</span>
         <div class="ttl">Cyber Security and the Menace of Cyber Attack in Modern Times</div>
@@ -431,9 +496,22 @@
 
       <article class="research-row reveal">
         <span class="yr mono">2024</span>
+        <div class="ttl">Agentic AI: Multi-Agent Autonomous Problem-Solving Architectures</div>
+        <div class="desc">Research paper analyzing multi-agent reflection loops, programmatic tool verification, and latency-accuracy trade-offs in reasoning workflows.</div>
+        <div class="venue mono">RESEARCH PAPER</div>
+        <div class="arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </div>
+      </article>
+
+      <article class="research-row reveal" style="cursor: pointer;" onclick="window.location.href='projects/vriti.html';">
+        <span class="yr mono">2024</span>
         <div class="ttl">Quantum Computing Algorithms Applied to Molecular Folding</div>
         <div class="desc">Independent research analyzing the speedup of quantum superposition sorting vs classical algorithmic approaches to biological peptide folding arrays.</div>
-        <div class="venue mono">PREPRINT // DOCS</div>
+        <div class="venue mono">VRITI DOCS // SIL REP</div>
         <div class="arrow">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -486,8 +564,8 @@
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
         </svg>
-        <div class="num"><span class="counter" data-target="3">0</span></div>
-        <div class="label mono">RESEARCH WRITING &amp; PAPERS</div>
+        <div class="num"><span class="counter" data-target="4">0</span></div>
+        <div class="label mono">RESEARCH PAPERS &amp; BOOKS</div>
       </div>
       <div class="hire-stat">
         <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
@@ -518,14 +596,14 @@
       <article class="school reveal">
         <div class="top">
           <div class="crest kimball">
-            <span class="mono">SF</span>
+            <span class="mono">LV</span>
           </div>
           <div class="meta">
             <span class="tag">SECONDARY EDUCATION</span>
             <span class="mono" style="font-size: 11px; color: var(--accent);">CLASS OF 2026</span>
           </div>
         </div>
-        <div class="name">Step by Step School</div>
+        <div class="name">Lotus Valley International School, Noida</div>
         <div class="loc mono">NOIDA, UP · INDIA</div>
         <div class="years mono">2022 — 2026 // CURRENT ENROLLMENT</div>
       </article>
@@ -634,7 +712,10 @@
     </div>
 
     <div class="leadership-grid">
-      <div class="lead-card reveal">
+      <div class="lead-card reveal" style="cursor: pointer;" onclick="if(!event.target.closest('a')) window.location.href='projects/Aarambh.html';">
+        <div style="width: 100%; height: 160px; border-radius: 6px; overflow: hidden; margin-bottom: 16px; border: 1px solid var(--line-2);">
+          <img src="Images/Volunteering.jpeg" alt="Ekaksh Goyal Volunteering with Aarambh Youth Wing" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+        </div>
         <div class="lead-top">
           <div class="lead-logo">
             <span class="mono">AA</span>
@@ -643,31 +724,37 @@
         </div>
         <div class="lead-name">Aarambh Youth Wing</div>
         <div class="lead-desc">Spearheaded the youth wing of the Aarambh social initiative, organizing educational camps, health awareness drives, and community outreach campaigns touching over 500+ families.</div>
-        <span class="lead-cta mono">NON-PROFIT LEADERSHIP →</span>
+        <a href="projects/Aarambh.html" class="lead-cta mono" style="display: inline-flex; align-items: center; gap: 6px;">AARAMBH CASE STUDY &amp; IMPACT →</a>
       </div>
 
       <div class="lead-card reveal">
+        <div style="width: 100%; height: 160px; border-radius: 6px; overflow: hidden; margin-bottom: 16px; border: 1px solid var(--line-2);">
+          <img src="Images/Comp.jpeg" alt="Ekaksh Goyal at Interschool Hackathons & Coding Competitions" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+        </div>
         <div class="lead-top">
           <div class="lead-logo">
             <span class="mono">CS</span>
           </div>
-          <span class="lead-role">ORGANIZER // MENTOR</span>
+          <span class="lead-role">ORGANIZER // HACKATHON LEAD</span>
         </div>
         <div class="lead-name">School Tech Society &amp; Hackathons</div>
-        <div class="lead-desc">Led technical workshops on cybersecurity hygiene, introductory Python, and robotics for underclassmen; judged student coding competitions and hackathon submissions.</div>
-        <span class="lead-cta mono">COMMUNITY MENTORSHIP →</span>
+        <div class="lead-desc">Led technical workshops on cybersecurity hygiene, introductory Python, and robotics for underclassmen; competed in national hackathons and judged student coding competitions.</div>
+        <span class="lead-cta mono" style="display: inline-flex; align-items: center; gap: 6px;">COMMUNITY MENTORSHIP →</span>
       </div>
 
       <div class="lead-card reveal">
+        <div style="width: 100%; height: 160px; border-radius: 6px; overflow: hidden; margin-bottom: 16px; border: 1px solid var(--line-2);">
+          <img src="Images/Camera.jpeg" alt="Ekaksh Goyal Photography & Visual Arts" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85); transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+        </div>
         <div class="lead-top">
           <div class="lead-logo">
-            <span class="mono">RS</span>
+            <span class="mono">PH</span>
           </div>
-          <span class="lead-role">AUTHOR // SCHOLAR</span>
+          <span class="lead-role">CREATIVE TECH // PHOTOGRAPHY</span>
         </div>
-        <div class="lead-name">Academic Research Dissemination</div>
-        <div class="lead-desc">Authored and published research on contemporary cybersecurity threats in IJSDR, presenting findings to peer cohorts to foster proactive vulnerability mitigation habits.</div>
-        <span class="lead-cta mono">ACADEMIC ADVOCACY →</span>
+        <div class="lead-name">Visual Arts &amp; Media Technology</div>
+        <div class="lead-desc">Exploring the intersection of visual framing, optical aesthetics, and media technologies through high-precision photography, creative digital design, and technical writing.</div>
+        <span class="lead-cta mono" style="display: inline-flex; align-items: center; gap: 6px;">CREATIVE DIRECTION →</span>
       </div>
     </div>
   </section>

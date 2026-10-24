@@ -1,155 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aarambh Website | Ekaksh Goyal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-  <div class="scroll-indicator"></div>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aarambh Youth Wing · Non-Profit Leadership &amp; Community Impact · Ekaksh Goyal</title>
+  <meta name="description" content="President & Founder of Aarambh Youth Wing. Mobilizing youth volunteers for digital literacy camps, preventive healthcare drives, and educational outreach serving 500+ families." />
 
-  <header>
-    <div class="header-content">
-      <h1>Aarambh Website</h1>
-      <p>Nonprofit Organization Portal</p>
-      <a href="../index.html#projects" class="button">
-        <i class="fas fa-arrow-left"></i> Back to Projects
+  <!-- Typography matching chahel.tech -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .case-nav {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px var(--pad-x);
+      background: rgba(10, 10, 12, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .award-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line-2);
+      background: var(--surface);
+      color: var(--text);
+    }
+    .award-pill.gold {
+      border-color: rgba(255, 190, 40, 0.45);
+      background: rgba(255, 190, 40, 0.08);
+      color: #ffd060;
+    }
+    .award-pill.cyan {
+      border-color: var(--accent-line);
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    .case-hero {
+      padding: 80px var(--pad-x) 60px;
+      position: relative;
+    }
+    .case-title {
+      font-size: clamp(48px, 8vw, 104px);
+      letter-spacing: -0.04em;
+      line-height: 0.94;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+    .impact-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin: 40px 0;
+    }
+    @media (max-width: 900px) {
+      .impact-stat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .impact-stat-box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+    }
+    .impact-stat-val {
+      font-size: clamp(32px, 4vw, 44px);
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .impact-stat-lbl {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .photo-feature {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--line-2);
+      margin: 40px 0;
+      background: #09090b;
+    }
+    .photo-feature img {
+      width: 100%;
+      max-height: 540px;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.85) contrast(1.05);
+      transition: filter .4s ease, transform .4s ease;
+    }
+    .photo-feature:hover img {
+      filter: brightness(1) contrast(1);
+      transform: scale(1.02);
+    }
+    .photo-caption {
+      padding: 16px 20px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+      background: rgba(10, 10, 12, 0.9);
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body style="background-color: rgb(10, 10, 12); font-family: 'Geist', sans-serif;">
+
+  <!-- NAVIGATION -->
+  <nav class="case-nav">
+    <div class="nav-mark">
+      <span class="dot" style="background: #ffd060;"></span>
+      <span class="mono">EKAKSH GOYAL · NON-PROFIT LEADERSHIP &amp; COMMUNITY OUTREACH</span>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <a href="../index.html#leadership" class="nav-cta mono">
+        <i class="fas fa-arrow-left" style="margin-right: 6px;"></i> BACK TO LEADERSHIP
       </a>
+      <a href="../Resume/EkakshGoyal_Resume.pdf" download="EkakshGoyal_Resume.pdf" class="btn btn-primary mono" style="padding: 8px 16px; font-size: 12px; background: #ffd060; border-color: #ffd060; color: #000;">
+        <i class="fas fa-download" style="margin-right: 6px;"></i> RESUME
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="case-hero">
+    <div class="eyebrow mono">
+      <span class="bar" style="background: #ffd060;"></span>
+      <span>YOUTH LEADERSHIP · SOCIAL EMPOWERMENT · DIGITAL EDUCATION</span>
+    </div>
+    <h1 class="case-title">
+      Aarambh <span style="font-family: 'Instrument Serif', serif; font-weight: 400; color: var(--text-dim); font-size: 0.6em;">(आरंभ) Youth Wing</span>
+    </h1>
+    <p style="font-size: clamp(18px, 2.2vw, 26px); color: var(--text-dim); margin-top: 18px; max-width: 880px; line-height: 1.45;">
+      Leading community transformation as Founder &amp; President of the Aarambh Youth Wing — organizing grassroots educational workshops, preventive health drives, and digital infrastructure to serve over 500+ underprivileged families across the NCR region.
+    </p>
+
+    <!-- BADGES -->
+    <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px;">
+      <div class="award-pill gold mono">
+        <i class="fas fa-crown"></i>
+        <span>FOUNDER &amp; PRESIDENT · YOUTH WING</span>
+      </div>
+      <div class="award-pill cyan mono">
+        <i class="fas fa-users"></i>
+        <span>500+ UNDERPRIVILEGED FAMILIES REACHED</span>
+      </div>
+      <div class="award-pill mono">
+        <i class="fas fa-laptop-code"></i>
+        <span>DIGITAL LITERACY &amp; STEM CAMPS</span>
+      </div>
+      <div class="award-pill mono">
+        <i class="fas fa-heartbeat"></i>
+        <span>HEALTHCARE &amp; SANITATION DRIVES</span>
+      </div>
     </div>
   </header>
 
-  <main class="project-detail">
-    <div class="project-header">
-      <h1>Aarambh Trust Website</h1>
-      <div class="project-meta">
-        <span><i class="fas fa-calendar-alt"></i> September 2022</span>
-        <span><i class="fas fa-tags"></i> Web Development, Nonprofit, CMS</span>
+  <!-- MAIN CASE STUDY -->
+  <main style="padding: 0 var(--pad-x) 100px; max-width: 1280px; margin: 0 auto;">
+
+    <!-- IMPACT STATS -->
+    <div class="impact-stat-grid">
+      <div class="impact-stat-box">
+        <div class="impact-stat-val" style="color: #ffd060;">500+</div>
+        <div class="impact-stat-lbl">Families Impacted</div>
       </div>
-      <p class="project-excerpt">The official website for Aarambh Trust for Women and Children featuring donation management and content management systems.</p>
-    </div>
-
-    <div class="project-content">
-      <div class="project-main">
-        <div class="project-gallery">
-          <img src="../Images/projects/aarambh-1.jpg" alt="Aarambh Homepage">
-          <img src="../Images/projects/aarambh-2.jpg" alt="Donation System">
-          <img src="../Images/projects/aarambh-3.jpg" alt="Mobile View">
-        </div>
-
-        <h2>Project Overview</h2>
-        <p>The Aarambh Trust website was designed to serve as the primary digital presence for this nonprofit organization working for women and children's welfare. The website needed to accomplish several key objectives: showcase the organization's work, facilitate donations, manage volunteers, and provide up-to-date information about initiatives.</p>
-
-        <h2>Key Features</h2>
-        <ul>
-          <li><strong>Donation Management:</strong> Secure payment gateway integration with tax receipt generation</li>
-          <li><strong>Content Management:</strong> Easy-to-update system for non-technical staff</li>
-          <li><strong>Event Management:</strong> Calendar system for upcoming events and volunteer opportunities</li>
-          <li><strong>Multilingual Support:</strong> Hindi and English language options</li>
-          <li><strong>Accessibility:</strong> WCAG 2.1 compliant design</li>
-          <li><strong>Responsive Design:</strong> Fully functional on all device sizes</li>
-        </ul>
-
-        <h2>Technical Implementation</h2>
-        <p>The project was implemented in phases:</p>
-        <ol>
-          <li><strong>Requirements Gathering:</strong> Worked closely with Aarambh team to understand needs</li>
-          <li><strong>Prototyping:</strong> Created wireframes and design mockups for feedback</li>
-          <li><strong>Development:</strong> Built custom WordPress theme with child theme for future-proofing</li>
-          <li><strong>Integration:</strong> Connected payment gateways, CRM, and email systems</li>
-          <li><strong>Training:</strong> Conducted workshops for staff on content management</li>
-        </ol>
-
-        <h2>Impact Metrics</h2>
-        <div class="impact-grid">
-          <div class="impact-item">
-            <div class="impact-value">300%</div>
-            <div class="impact-label">Increase in donations</div>
-          </div>
-          <div class="impact-item">
-            <div class="impact-value">50+</div>
-            <div class="impact-label">Volunteers registered</div>
-          </div>
-          <div class="impact-item">
-            <div class="impact-value">10,000+</div>
-            <div class="impact-label">Monthly visitors</div>
-          </div>
-          <div class="impact-item">
-            <div class="impact-value">24/7</div>
-            <div class="impact-label">Uptime</div>
-          </div>
-        </div>
-
-        <h2>Security Measures</h2>
-        <ul>
-          <li>SSL encryption for all transactions</li>
-          <li>Regular security audits and penetration testing</li>
-          <li>GDPR-compliant data handling</li>
-          <li>Automated backups with 30-day retention</li>
-          <li>Two-factor authentication for admin access</li>
-        </ul>
+      <div class="impact-stat-box">
+        <div class="impact-stat-val" style="color: var(--accent);">50+</div>
+        <div class="impact-stat-lbl">Youth Volunteers Led</div>
       </div>
-
-      <div class="project-sidebar">
-        <div class="tech-stack">
-          <h3>Technologies Used</h3>
-          <div class="tech-stack-items">
-            <span class="tech-stack-item">WordPress</span>
-            <span class="tech-stack-item">PHP</span>
-            <span class="tech-stack-item">MySQL</span>
-            <span class="tech-stack-item">JavaScript</span>
-            <span class="tech-stack-item">Razorpay API</span>
-            <span class="tech-stack-item">AWS</span>
-          </div>
-        </div>
-
-        <div class="project-links">
-          <h3>Project Links</h3>
-          <a href="https://aarambhtrust.org" target="_blank">
-            <i class="fas fa-external-link-alt"></i> Live Website
-          </a>
-          <a href="https://github.com/ekaksh0005/Aarambh-Trust-for-Women-and-Children" target="_blank">
-            <i class="fab fa-github"></i> Theme Code
-          </a>
-         
-
-        <div class="donation-stats">
-          <h3>Donation Impact</h3>
-          <div class="stat-item">
-            <div class="stat-value">300%</div>
-            <div class="stat-label">Increase in Donations</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value">95%</div>
-            <div class="stat-label">Recurring Donors</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value">10x</div>
-            <div class="stat-label">More Transactions</div>
-          </div>
-        </div>
-
-        <div class="testimonial">
-          <h3>Client Testimonial</h3>
-          <div class="testimonial-content">
-            <i class="fas fa-quote-left"></i>
-            <p>"The new website has transformed our ability to reach supporters and manage donations. Ekaksh understood our needs perfectly and delivered beyond expectations."</p>
-            <div class="testimonial-author">- Cheena Goyal Aarambh Trust Director</div>
-          </div>
-        </div>
+      <div class="impact-stat-box">
+        <div class="impact-stat-val" style="color: #64ffda;">120+</div>
+        <div class="impact-stat-lbl">Hours of Workshop Teaching</div>
+      </div>
+      <div class="impact-stat-box">
+        <div class="impact-stat-val" style="color: var(--text);">300%</div>
+        <div class="impact-stat-lbl">Donation Portal Efficiency</div>
       </div>
     </div>
+
+    <!-- REAL PHOTO EMBED: EKAKSH VOLUNTEERING -->
+    <div class="photo-feature">
+      <img src="../Images/Volunteering.jpeg" alt="Ekaksh Goyal leading community outreach and volunteering drives with Aarambh Youth Wing" />
+      <div class="photo-caption">
+        <span><i class="fas fa-camera" style="color: var(--accent); margin-right: 6px;"></i> ON THE GROUND · EKAKSH GOYAL DIRECTING FIELD DISTRIBUTION &amp; OUTREACH</span>
+        <span style="color: var(--text-mute);">AARAMBH TRUST COMMUNITY INITIATIVE</span>
+      </div>
+    </div>
+
+    <!-- SECTION 1: MISSION & INITIATIVES -->
+    <section class="block" style="border-top: 1px solid var(--line); padding: 60px 0;">
+      <div class="block-head" style="margin-bottom: 30px;">
+        <div class="block-tag mono">01 / THE MISSION</div>
+        <h2 class="block-title">Democratizing Access <em>Through Youth Leadership</em></h2>
+      </div>
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; font-size: 16px; line-height: 1.7; color: var(--text-dim);">
+        <div>
+          <p style="margin-bottom: 16px;">
+            The <strong>Aarambh Trust for Women and Children</strong> was established to alleviate systemic socio-economic barriers facing underserved communities. Recognizing the boundless energy of student cohorts, Ekaksh established and directed the <strong>Aarambh Youth Wing</strong> to channel high school students into structured community action.
+          </p>
+          <p>
+            Under his leadership, the Youth Wing formulated multi-week curricula covering foundational English literacy, hygiene practices, and basic digital fluency. By bridging the digital divide, students who had never operated personal computers were taught typing, web safety, and foundational software skills.
+          </p>
+        </div>
+        <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 26px;">
+          <div class="mono" style="font-size: 11px; color: #ffd060; letter-spacing: 0.12em; margin-bottom: 14px;">KEY PROGRAM INITIATIVES</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 14px; color: var(--text);">
+            <li style="display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: #ffd060; margin-top: 4px;"></i> Digital literacy workshops for disadvantaged children</li>
+            <li style="display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: #ffd060; margin-top: 4px;"></i> Preventive healthcare checkup camps &amp; medicine provision</li>
+            <li style="display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: #ffd060; margin-top: 4px;"></i> Distribution of educational stationery &amp; winter essentials</li>
+            <li style="display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: #ffd060; margin-top: 4px;"></i> Interactive web portal for donor transparency and volunteer tracking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: DIGITAL ARCHITECTURE -->
+    <section class="block" style="border-top: 1px solid var(--line); padding: 60px 0;">
+      <div class="block-head" style="margin-bottom: 30px;">
+        <div class="block-tag mono">02 / TECHNOLOGY PORTAL</div>
+        <h2 class="block-title">Engineering Non-Profit Transparency</h2>
+      </div>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--text-dim); max-width: 880px; margin-bottom: 24px;">
+        To amplify the NGO's reach and institutional credibility, Ekaksh architected a bespoke web portal for Aarambh featuring end-to-end encrypted donation processing, 80G tax receipt automation, and a live volunteer management registry. This digital transformation fueled a <strong>300% increase in recurring donor contributions</strong>.
+      </p>
+    </section>
+
+    <!-- NAVIGATION CTAS -->
+    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-top: 40px; margin-top: 40px; flex-wrap: wrap; gap: 20px;">
+      <a href="../index.html#leadership" class="nav-cta mono">
+        <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> BACK TO LEADERSHIP
+      </a>
+      <a href="../index.html#work" class="btn btn-primary mono" style="padding: 12px 24px; font-size: 13px;">
+        <i class="fas fa-th-large" style="margin-right: 8px;"></i> VIEW ALL PROJECTS
+      </a>
+      <a href="../Resume/EkakshGoyal_Resume.pdf" download="EkakshGoyal_Resume.pdf" class="nav-cta mono">
+        DOWNLOAD RESUME <i class="fas fa-download" style="margin-left: 8px;"></i>
+      </a>
+    </div>
+
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Ekaksh Goyal. All rights reserved.</p>
-      <p>Computer Science Enthusiast & Innovator</p>
-    </div>
+  <footer class="footer">
+    <span>© 2026 · EKAKSH GOYAL · AARAMBH YOUTH WING</span>
+    <span>NON-PROFIT LEADERSHIP &amp; COMMUNITY IMPACT</span>
+    <span>NOIDA, UP · INDIA</span>
   </footer>
 
-  <script src="../main.js"></script>
 </body>
 </html>

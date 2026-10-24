@@ -1,174 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buggy App | Ekaksh Goyal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-  <div class="scroll-indicator"></div>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buggy App · DevSecOps &amp; CVE Vulnerability Radar · Ekaksh Goyal</title>
+  <meta name="description" content="A real-time developer security monitor aggregating CVE databases, zero-day threat feeds, and automated repository vulnerability alerts." />
 
-  <header>
-    <div class="header-content">
-      <h1>Buggy App</h1>
-      <p>Vulnerability Alert System</p>
-      <a href="../index.html#projects" class="button">
-        <i class="fas fa-arrow-left"></i> Back to Projects
+  <!-- Typography matching chahel.tech -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .case-nav {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px var(--pad-x);
+      background: rgba(10, 10, 12, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .award-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line-2);
+      background: var(--surface);
+      color: var(--text);
+    }
+    .award-pill.red {
+      border-color: rgba(255, 90, 90, 0.45);
+      background: rgba(255, 90, 90, 0.08);
+      color: #ff6e6e;
+    }
+    .award-pill.cyan {
+      border-color: var(--accent-line);
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    .case-hero {
+      padding: 80px var(--pad-x) 60px;
+      position: relative;
+    }
+    .case-title {
+      font-size: clamp(48px, 8vw, 104px);
+      letter-spacing: -0.04em;
+      line-height: 0.94;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+    .cve-radar-box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px;
+      margin: 30px 0;
+    }
+    .cve-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 16px;
+      background: rgba(16, 16, 20, 0.75);
+      border: 1px solid var(--line-2);
+      border-radius: 6px;
+      margin-bottom: 10px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 12px;
+      transition: border-color .2s;
+    }
+    .cve-item:hover {
+      border-color: var(--accent-line);
+    }
+    .badge-crit {
+      background: rgba(255, 90, 90, 0.15);
+      border: 1px solid rgba(255, 90, 90, 0.45);
+      color: #ff6e6e;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+    }
+    .badge-high {
+      background: rgba(255, 170, 50, 0.15);
+      border: 1px solid rgba(255, 170, 50, 0.45);
+      color: #ffaa32;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+    }
+    .badge-patched {
+      background: rgba(100, 255, 218, 0.15);
+      border: 1px solid var(--accent-line);
+      color: var(--accent);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body style="background-color: rgb(10, 10, 12); font-family: 'Geist', sans-serif;">
+
+  <!-- NAVIGATION -->
+  <nav class="case-nav">
+    <div class="nav-mark">
+      <span class="dot" style="background: #ff6e6e;"></span>
+      <span class="mono">EKAKSH GOYAL · DEVSECOPS &amp; SECURITY SYSTEMS</span>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <a href="../index.html#work" class="nav-cta mono">
+        <i class="fas fa-arrow-left" style="margin-right: 6px;"></i> BACK TO PORTFOLIO
       </a>
+      <a href="../Resume/EkakshGoyal_Resume.pdf" download="EkakshGoyal_Resume.pdf" class="btn btn-primary mono" style="padding: 8px 16px; font-size: 12px; background: #ff6e6e; border-color: #ff6e6e; color: #000;">
+        <i class="fas fa-download" style="margin-right: 6px;"></i> RESUME
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="case-hero">
+    <div class="eyebrow mono">
+      <span class="bar" style="background: #ff6e6e;"></span>
+      <span>CYBERSECURITY · CVE MONITORING · THREAT DETECTION</span>
+    </div>
+    <h1 class="case-title">
+      Buggy App <span style="font-family: 'Instrument Serif', serif; font-weight: 400; color: var(--text-dim); font-size: 0.6em;">&amp; Vulnerability Radar</span>
+    </h1>
+    <p style="font-size: clamp(18px, 2.2vw, 26px); color: var(--text-dim); margin-top: 18px; max-width: 880px; line-height: 1.45;">
+      An automated developer security pipeline continuously cross-referencing national vulnerability databases, zero-day threat feeds, and codebase dependency trees to flag critical exposures before deployment.
+    </p>
+
+    <!-- BADGES -->
+    <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px;">
+      <div class="award-pill red mono">
+        <i class="fas fa-shield-virus"></i>
+        <span>NVD &amp; GITHUB ADVISORY AUTOMATION</span>
+      </div>
+      <div class="award-pill cyan mono">
+        <i class="fas fa-tachometer-alt"></i>
+        <span>CVSS 3.1 DYNAMIC RISK SCORING</span>
+      </div>
+      <div class="award-pill mono">
+        <i class="fas fa-bell"></i>
+        <span>WEBHOOK &amp; DISCORD SECURITY DISPATCH</span>
+      </div>
+      <div class="award-pill mono">
+        <i class="fas fa-code-branch"></i>
+        <span>AST DEPENDENCY TREE PARSING</span>
+      </div>
     </div>
   </header>
 
-  <main class="project-detail">
-    <div class="project-header">
-      <h1>Buggy - Vulnerability Alert System</h1>
-      <div class="project-meta">
-        <span><i class="fas fa-calendar-alt"></i> April 2023</span>
-        <span><i class="fas fa-tags"></i> Cybersecurity, Monitoring, Alerts</span>
+  <!-- MAIN CASE STUDY -->
+  <main style="padding: 0 var(--pad-x) 100px; max-width: 1280px; margin: 0 auto;">
+
+    <!-- LIVE CVE AUDIT RADAR -->
+    <div class="cve-radar-box">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 14px; margin-bottom: 20px;">
+        <div class="mono" style="font-size: 11px; color: #ff6e6e; letter-spacing: 0.12em;">
+          <span style="display: inline-block; width: 6px; height: 6px; background: #ff6e6e; border-radius: 50%; margin-right: 8px;"></span>
+          LIVE CVE AUDIT STREAM // THREAT INDEX: 94.2% MITIGATED
+        </div>
+        <div class="mono" style="font-size: 11px; color: var(--text-mute);">
+          POLLING INTERVAL: 60s
+        </div>
       </div>
-      <p class="project-excerpt">An application that provides real-time notifications about software bugs and security vulnerabilities with resolution status tracking.</p>
+
+      <!-- Vulnerability entries -->
+      <div class="cve-item">
+        <div>
+          <span style="color: #ff6e6e; font-weight: 600; margin-right: 12px;">CVE-2024-3094</span>
+          <span style="color: var(--text);">XZ Utils Embedded Upstream Backdoor (sshd)</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <span class="badge-crit">CVSS 10.0 CRITICAL</span>
+          <span class="badge-patched">MITIGATED</span>
+        </div>
+      </div>
+
+      <div class="cve-item">
+        <div>
+          <span style="color: #ffaa32; font-weight: 600; margin-right: 12px;">CVE-2023-44487</span>
+          <span style="color: var(--text);">HTTP/2 Rapid Reset Distributed Denial of Service</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <span class="badge-high">CVSS 7.5 HIGH</span>
+          <span class="badge-patched">RATE-LIMITED</span>
+        </div>
+      </div>
+
+      <div class="cve-item">
+        <div>
+          <span style="color: #64ffda; font-weight: 600; margin-right: 12px;">CVE-2021-44228</span>
+          <span style="color: var(--text);">Log4j JNDI Remote Code Execution Flaw</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <span class="badge-crit">CVSS 10.0 CRITICAL</span>
+          <span class="badge-patched">V2.17.1 APPLIED</span>
+        </div>
+      </div>
     </div>
 
-    <div class="project-content">
-      <div class="project-main">
-        <div class="project-gallery">
-          <img src="../Images/projects/buggy-1.jpg" alt="Buggy Dashboard">
-          <img src="../Images/projects/buggy-2.jpg" alt="Vulnerability Details">
-          <img src="../Images/projects/buggy-3.jpg" alt="Notification System">
-        </div>
-
-        <h2>Project Overview</h2>
-        <p>Buggy is a vulnerability monitoring system designed to help developers and IT professionals stay informed about critical software vulnerabilities affecting their systems. The application aggregates data from multiple security databases and provides actionable alerts with severity ratings and patch availability information.</p>
-
-        <h2>Key Features</h2>
-        <ul>
-          <li><strong>Real-time Monitoring:</strong> Continuously scans multiple vulnerability databases</li>
-          <li><strong>Custom Alerts:</strong> Configurable notifications based on severity and software inventory</li>
-          <li><strong>Impact Analysis:</strong> Estimates potential damage from unpatched vulnerabilities</li>
-          <li><strong>Patch Tracking:</strong> Monitors patch development and release status</li>
-          <li><strong>Reporting:</strong> Generates compliance and audit reports</li>
-          <li><strong>Integration:</strong> Works with common project management tools</li>
-        </ul>
-
-        <h2>Technical Architecture</h2>
-        <p>The system is built with a modular architecture:</p>
-        <div class="architecture-diagram">
-          <div class="arch-layer">
-            <h3>Data Collection Layer</h3>
-            <p>Scrapers and API connectors for NVD, CVE, vendor advisories</p>
-          </div>
-          <div class="arch-layer">
-            <h3>Processing Layer</h3>
-            <p>Normalization, severity scoring, correlation engine</p>
-          </div>
-          <div class="arch-layer">
-            <h3>Storage Layer</h3>
-            <p>Database with optimized query capabilities</p>
-          </div>
-          <div class="arch-layer">
-            <h3>Presentation Layer</h3>
-            <p>Web interface, mobile app, and API endpoints</p>
-          </div>
-        </div>
-
-        <h2>Security Measures</h2>
-        <ul>
-          <li>End-to-end encryption for all communications</li>
-          <li>Role-based access control with 2FA</li>
-          <li>Regular penetration testing</li>
-          <li>Isolated data processing containers</li>
-          <li>Immutable audit logs</li>
-        </ul>
-
-        <h2>Performance Metrics</h2>
-        <table class="metrics-table">
-          <tr>
-            <th>Metric</th>
-            <th>Value</th>
-          </tr>
-          <tr>
-            <td>Vulnerability Sources</td>
-            <td>15+ databases monitored</td>
-          </tr>
-          <tr>
-            <td>Update Frequency</td>
-            <td>Every 15 minutes</td>
-          </tr>
-          <tr>
-            <td>Notification Latency</td>
-            <td>< 5 minutes from discovery</td>
-          </tr>
-          <tr>
-            <td>System Accuracy</td>
-            <td>99.2% vulnerability matching</td>
-          </tr>
-        </table>
+    <!-- SECTION 1: THE PROBLEM -->
+    <section class="block" style="border-top: 1px solid var(--line); padding: 60px 0;">
+      <div class="block-head" style="margin-bottom: 30px;">
+        <div class="block-tag mono">01 / DEVSECOPS PARADIGM</div>
+        <h2 class="block-title">Shifting Security <em>Left in the Pipeline</em></h2>
       </div>
-
-      <div class="project-sidebar">
-        <div class="tech-stack">
-          <h3>Technologies Used</h3>
-          <div class="tech-stack-items">
-            <span class="tech-stack-item">Python</span>
-            <span class="tech-stack-item">Django</span>
-            <span class="tech-stack-item">PostgreSQL</span>
-            <span class="tech-stack-item">Celery</span>
-            <span class="tech-stack-item">Redis</span>
-            <span class="tech-stack-item">Docker</span>
-          </div>
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; font-size: 16px; line-height: 1.7; color: var(--text-dim);">
+        <div>
+          <p style="margin-bottom: 16px;">
+            In open-source software ecosystems, modern applications inherit thousands of transitive sub-dependencies. A single vulnerability in a low-level utility library can expose entire cloud platforms to remote execution or privilege escalation.
+          </p>
+          <p>
+            <strong>Buggy App</strong> operates as an automated sentry. It scans project lockfiles, compares declared dependency hashes against live NIST NVD data, and alerts engineers through prioritized webhooks before code is committed to staging environments.
+          </p>
         </div>
-
-        <div class="project-links">
-          <h3>Project Links</h3>
-          <a href="https://github.com/ekakshgoyal/buggy-app" target="_blank">
-            <i class="fab fa-github"></i> Source Code
-          </a>
-          <a href="#" target="_blank">
-            <i class="fas fa-file-pdf"></i> Security Whitepaper
-          </a>
-          <a href="#" target="_blank">
-            <i class="fas fa-download"></i> Windows Installer
-          </a>
-        </div>
-
-        <div class="security-metrics">
-          <h3>Detection Metrics</h3>
-          <div class="metric">
-            <div class="metric-label">Vulnerabilities</div>
-            <div class="metric-value">150,000+</div>
-          </div>
-          <div class="metric">
-            <div class="metric-label">Accuracy</div>
-            <div class="metric-value">99.2%</div>
-          </div>
-          <div class="metric">
-            <div class="metric-label">Latency</div>
-            <div class="metric-value"><5min</div>
-          </div>
-        </div>
-
-        <div class="use-cases">
-          <h3>Use Cases</h3>
-          <ul>
-            <li>Enterprise Security Teams</li>
-            <li>Software Developers</li>
-            <li>IT Administrators</li>
-            <li>Compliance Officers</li>
+        <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 26px;">
+          <div class="mono" style="font-size: 11px; color: #ff6e6e; letter-spacing: 0.12em; margin-bottom: 14px;">KEY TECHNICAL FEATURES</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 14px; color: var(--text);">
+            <li style="display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: #ff6e6e; margin-top: 4px;"></i> Continuous NVD 2.0 REST API polling</li>
+            <li style="display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: #ff6e6e; margin-top: 4px;"></i> Dependency tree abstract syntax parsing</li>
+            <li style="display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: #ff6e6e; margin-top: 4px;"></i> Discord, Slack, and Email webhook dispatches</li>
+            <li style="display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: #ff6e6e; margin-top: 4px;"></i> Severity scoring weighted by network exploitability</li>
           </ul>
         </div>
       </div>
+    </section>
+
+    <!-- NAVIGATION CTAS -->
+    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-top: 40px; margin-top: 40px; flex-wrap: wrap; gap: 20px;">
+      <a href="F1 Hub.html" class="nav-cta mono">
+        <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> PREVIOUS: F1 POKEDEX
+      </a>
+      <a href="../index.html#work" class="btn btn-primary mono" style="padding: 12px 24px; font-size: 13px;">
+        <i class="fas fa-th-large" style="margin-right: 8px;"></i> ALL PROJECTS
+      </a>
+      <a href="../index.html#research" class="nav-cta mono">
+        NEXT: RESEARCH PAPERS <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+      </a>
     </div>
+
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Ekaksh Goyal. All rights reserved.</p>
-      <p>Computer Science Enthusiast & Innovator</p>
-    </div>
+  <footer class="footer">
+    <span>© 2026 · EKAKSH GOYAL · BUGGY APP</span>
+    <span>DEVSECOPS &amp; VULNERABILITY RADAR</span>
+    <span>NOIDA, UP · INDIA</span>
   </footer>
 
-  <script src="/main.js"></script>
 </body>
 </html>
