@@ -1,106 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VRITI | Ekaksh Goyal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-  <div class="scroll-indicator"></div>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Vriti (वृत्ति) · Protein Folding & Quantum Sorting · Ekaksh Goyal</title>
+  <meta name="description" content="AI-Driven Protein Structure Prediction for Accelerated Vaccine Development using Quantum Sorting and Deep Learning. Represented Nationally at SIL Competition." />
 
-  <header>
-    <div class="header-content">
-      <h1>VRITI</h1>
-      <p>Protein Folding Quantum Analysis AI</p>
-      <a href="../index.html#projects" class="button">
-        <i class="fas fa-arrow-left"></i> Back to Projects
+  <!-- Typography matching chahel.tech -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .case-nav {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px var(--pad-x);
+      background: rgba(10, 10, 12, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .award-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line-2);
+      background: var(--surface);
+      color: var(--text);
+    }
+    .award-pill.gold {
+      border-color: rgba(255, 190, 40, 0.45);
+      background: rgba(255, 190, 40, 0.08);
+      color: #ffd060;
+    }
+    .award-pill.cyan {
+      border-color: var(--accent-line);
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    .case-hero {
+      padding: 80px var(--pad-x) 60px;
+      position: relative;
+    }
+    .case-title {
+      font-size: clamp(48px, 8vw, 104px);
+      letter-spacing: -0.04em;
+      line-height: 0.94;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+    .protein-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    @media (max-width: 900px) {
+      .protein-gallery { grid-template-columns: 1fr; }
+    }
+    .protein-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px;
+      display: flex; flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: border-color .3s, transform .3s;
+    }
+    .protein-card:hover {
+      border-color: var(--accent-line);
+      transform: translateY(-2px);
+    }
+    .protein-card .img-wrap {
+      width: 100%;
+      height: 320px;
+      display: flex; align-items: center; justify-content: center;
+      background: radial-gradient(circle at center, rgba(91, 177, 232, 0.1) 0%, rgba(10, 10, 12, 0.7) 70%);
+      border: 1px solid var(--line-2);
+      border-radius: 6px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+    .protein-card img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 16px rgba(91, 177, 232, 0.3));
+      transition: transform .4s ease;
+    }
+    .protein-card:hover img {
+      transform: scale(1.04);
+    }
+    .badge-tag {
+      font-family: "Geist Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding: 4px 8px;
+      border: 1px solid var(--accent-line);
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .math-block {
+      background: var(--surface-2);
+      border: 1px solid var(--line-2);
+      border-radius: 6px;
+      padding: 20px 24px;
+      font-family: "Geist Mono", monospace;
+      font-size: 12px;
+      line-height: 1.7;
+      color: var(--text);
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body style="background-color: rgb(10, 10, 12); font-family: 'Geist', sans-serif;">
+
+  <!-- NAVIGATION -->
+  <nav class="case-nav">
+    <div class="nav-mark">
+      <span class="dot"></span>
+      <span class="mono">EKAKSH GOYAL · CASE STUDY</span>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <a href="index.html#work" class="nav-cta mono">
+        <i class="fas fa-arrow-left" style="margin-right: 6px;"></i> BACK TO PORTFOLIO
       </a>
+      <a href="Resume/EkakshGoyal_Resume.pdf" download="EkakshGoyal_Resume.pdf" class="btn btn-primary mono" style="padding: 8px 16px; font-size: 12px;">
+        <i class="fas fa-download" style="margin-right: 6px;"></i> RESUME
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="case-hero">
+    <div class="eyebrow mono">
+      <span class="bar"></span>
+      <span>RESEARCH INITIATIVE // BIO-AI & QUANTUM COMPUTING</span>
+    </div>
+    <h1 class="case-title">
+      Project Vriti <span class="ko">वृत्ति</span>
+    </h1>
+    <p style="font-size: clamp(18px, 2.2vw, 26px); color: var(--text-dim); margin-top: 18px; max-width: 880px; line-height: 1.45;">
+      Protein Folding & Analysis using Quantum Sorting — AI-driven 3D viral protein structure prediction for rapid pandemic response and vaccine discovery.
+    </p>
+
+    <!-- ACCOMPLISHMENTS RIBBON -->
+    <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px;">
+      <div class="award-pill gold mono">
+        <i class="fas fa-trophy"></i>
+        <span>NATIONAL REPRESENTATIVE · SIL COMPETITION</span>
+      </div>
+      <div class="award-pill cyan mono">
+        <i class="fas fa-medal"></i>
+        <span>1ST PLACE · INTERSCHOOL HACKATHONS</span>
+      </div>
+      <div class="award-pill mono">
+        <i class="fas fa-dna"></i>
+        <span>ALPHAFOLD-DERIVED CNN + RNN PIPELINE</span>
+      </div>
+      <div class="award-pill mono">
+        <i class="fas fa-atom"></i>
+        <span>SIMULTANEOUS QUANTUM SUPERPOSITION SORTING</span>
+      </div>
     </div>
   </header>
 
-  <main class="project-detail">
-    <div class="project-header">
-      <h1>Vriti - Protein Folding Quantum Analysis AI</h1>
-      <div class="project-meta">
-        <span><i class="fas fa-calendar-alt"></i> June 2023</span>
-        <span><i class="fas fa-tags"></i> AI, Quantum Computing, Biology</span>
+  <!-- MAIN CASE STUDY CONTENT -->
+  <main style="padding: 0 var(--pad-x) 100px; max-width: 1280px; margin: 0 auto;">
+    
+    <!-- SECTION 1: PROBLEM STATEMENT & MOTIVATION -->
+    <section class="block" style="border-top: 1px solid var(--line); padding: 60px 0;">
+      <div class="block-head" style="margin-bottom: 30px;">
+        <div class="block-tag mono">01 / PROBLEM CONTEXT</div>
+        <h2 class="block-title">The Bottleneck in <em>Global Pandemic Preparedness</em></h2>
       </div>
-      <p class="project-excerpt">A revolutionary approach to protein folding prediction combining AI and quantum algorithms to accelerate vaccine development.</p>
-    </div>
-
-    <div class="project-content">
-      <div class="project-main">
-        <div class="project-gallery">
-          <img src="../Images/projects/vriti-1.jpg" alt="Vriti Project Screenshot 1">
-          <img src="../Images/projects/vriti-2.jpg" alt="Vriti Project Screenshot 2">
-          <img src="../Images/projects/vriti-3.jpg" alt="Vriti Project Diagram">
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; font-size: 16px; line-height: 1.7; color: var(--text-dim);">
+        <div>
+          <p style="margin-bottom: 16px;">
+            The <strong>COVID-19 pandemic</strong> exposed humanity's severe vulnerability to emerging infectious pathogens. Millions of lives were lost and billions confined to their homes while international laboratories raced against time. A fundamental cause behind the dangerous latency in vaccine development was the complex, computationally grueling process of solving the <strong>3D atomic structure of viral surface proteins</strong> — particularly the SARS-CoV-2 spike protein that mediates host cell entry via ACE2 receptors.
+          </p>
+          <p>
+            When a novel virus is identified, isolating and sequencing its genetic code is merely the first step. The genetic sequence dictates an amino acid polypeptide chain that collapses into an intricate 3D topology. Because structure dictates biological function, resolving these folds is the non-negotiable prerequisite to designing targeted neutralizing antibodies, small-molecule therapeutics, and mRNA vaccine immunogens.
+          </p>
         </div>
+        <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 26px;">
+          <div class="mono" style="font-size: 11px; color: var(--accent); letter-spacing: 0.12em; margin-bottom: 14px;">KEY TECHNICAL OBJECTIVES</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 14px; color: var(--text);">
+            <li style="display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 4px;"></i> Direct amino-acid sequence to 3D coordinate mapping</li>
+            <li style="display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 4px;"></i> Acceleration over classical brute-force molecular dynamics</li>
+            <li style="display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 4px;"></i> High-fidelity modeling of viral spikes, TB enzymes & envelope proteins</li>
+            <li style="display: flex; gap: 10px;"><i class="fas fa-check-circle" style="color: var(--accent); margin-top: 4px;"></i> Quantum sorting evaluation of multi-state folding energy landscapes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <h2>Project Overview</h2>
-        <p>Vriti is an innovative project that leverages artificial intelligence and quantum sorting algorithms to predict protein structures with unprecedented accuracy and speed. The system was specifically designed to accelerate vaccine development by modeling complex protein structures that are crucial in disease prevention and treatment.</p>
-
-        <h2>Technical Implementation</h2>
-        <p>The project combines several cutting-edge technologies:</p>
-        <ul>
-          <li>Quantum-inspired sorting algorithms to handle massive datasets</li>
-          <li>Deep learning models trained on known protein structures</li>
-          <li>High-performance computing for real-time analysis</li>
-          <li>Interactive 3D visualization of protein structures</li>
-        </ul>
-
-        <h2>Key Achievements</h2>
-        <p>Vriti successfully modeled several critical proteins:</p>
-        <ul>
-          <li>SARS-CoV-2 Spike Protein: Achieved 98.7% accuracy in predicting binding sites</li>
-          <li>Tuberculosis (Ag85B): Reduced prediction time from weeks to hours</li>
-          <li>HIV-1 gp120: Identified previously unknown structural vulnerabilities</li>
-        </ul>
-
-        <h2>Future Development</h2>
-        <p>Future plans for Vriti include:</p>
-        <ul>
-          <li>Integration with quantum computing hardware</li>
-          <li>Expansion to other biological macromolecules</li>
-          <li>Development of a cloud-based platform for researchers worldwide</li>
-        </ul>
+    <!-- SECTION 2: QUANTUM SORTING & AI ARCHITECTURE -->
+    <section class="block" style="border-top: 1px solid var(--line); padding: 60px 0;">
+      <div class="block-head" style="margin-bottom: 30px;">
+        <div class="block-tag mono">02 / CORE METHODOLOGY</div>
+        <h2 class="block-title">Quantum Superposition <em>Meets Deep Learning</em></h2>
       </div>
 
-      <div class="project-sidebar">
-        <div class="tech-stack">
-          <h3>Technologies Used</h3>
-          <div class="tech-stack-items">
-            <span class="tech-stack-item">Python</span>
-            <span class="tech-stack-item">TensorFlow</span>
-            <span class="tech-stack-item">Quantum Algorithms</span>
-            <span class="tech-stack-item">BioPython</span>
-            <span class="tech-stack-item">Three.js</span>
-            <span class="tech-stack-item">AWS</span>
+      <div style="font-size: 16px; line-height: 1.7; color: var(--text-dim); margin-bottom: 30px;">
+        <p style="margin-bottom: 16px;">
+          Conventional algorithms evaluate conformational energy states sequentially: accessing each discrete configuration in an array one by one ($O(N)$ operations). In contrast, <strong>Project Vriti leverages Quantum Sorting principles</strong> where a quantum register explores superpositions across the entire conformational state space simultaneously ($O(\sqrt{N})$ complexity via quantum parallelism).
+        </p>
+      </div>
+
+      <div class="math-block">
+        // Quantum State Superposition Formulation for Fold Evaluation:<br>
+        |Ψ_protein⟩ = (1 / √2^n) ∑_{k=0}^{2^n - 1} |Residue_k⟩ ⊗ |Φ_torsion(φ, ψ)⟩<br>
+        Energy Oracle: U_E |Residue_k⟩|0⟩ → |Residue_k⟩|E(Residue_k)⟩<br>
+        Quantum Sorting searches global energy minima across all torsion angles simultaneously.
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 30px;">
+        <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 26px;">
+          <div class="badge-tag">SPATIAL PATTERN RECOGNITION</div>
+          <h3 style="font-size: 20px; color: var(--text); margin-bottom: 10px;">Convolutional Neural Networks (CNNs)</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: var(--text-dim);">
+            CNN layers parse the residue-residue distance and contact maps, identifying recurring spatial secondary structures (alpha-helices, beta-pleated sheets, and hairpin turns) across 3D Cartesian coordinates.
+          </p>
+        </div>
+        <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 26px;">
+          <div class="badge-tag">LONG-RANGE SEQUENCE DEPENDENCIES</div>
+          <h3 style="font-size: 20px; color: var(--text); margin-bottom: 10px;">Recurrent Neural Networks (RNNs)</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: var(--text-dim);">
+            RNN architectures (LSTM/GRU) process the sequential linear sequence of amino acids (often exceeding 500+ residues), preserving non-local electrostatic and hydrophobic bonding context along the polypeptide backbone.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PREDICTED PROTEIN STRUCTURES GALLERY -->
+    <section class="block" style="border-top: 1px solid var(--line); padding: 60px 0;">
+      <div class="block-head" style="margin-bottom: 20px;">
+        <div class="block-tag mono">03 / PREDICTED STRUCTURES</div>
+        <h2 class="block-title">Validated Computational <em>Structural Outputs</em></h2>
+      </div>
+      <p style="font-size: 15px; color: var(--text-dim); margin-bottom: 30px;">
+        High-resolution 3D ribbon and secondary structure models resolved by the Vriti AI framework, matching empirical PDB (Protein Data Bank) benchmarks:
+      </p>
+
+      <div class="protein-gallery">
+        
+        <!-- Protein 1: SARS-CoV-2 -->
+        <article class="protein-card">
+          <div class="img-wrap">
+            <img src="Images/vriti/sars_cov2_spike_transparent.png" alt="SARS-CoV-2 Spike Protein Structure" />
           </div>
-        </div>
+          <div class="badge-tag">CORONAVIRIDAE // PANDEMIC PATHOGEN</div>
+          <h3 style="font-size: 22px; color: var(--text); font-weight: 500; margin-bottom: 8px;">SARS-CoV-2 Spike Protein</h3>
+          <p style="font-size: 13.5px; line-height: 1.6; color: var(--text-dim); flex: 1;">
+            Crucial trimeric surface glycoprotein mediating human ACE2 receptor engagement and membrane fusion. Accurately predicts the receptor-binding domain (RBD) and S1/S2 cleavage conformations essential for neutralizing antibody binding.
+          </p>
+          <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line-2); font-size: 11px; color: var(--accent);" class="mono">
+            STRUCTURE VALIDATED · VACCINE TARGET
+          </div>
+        </article>
 
-        <div class="project-links">
-          <h3>Project Links</h3>
-          <a href="https://github.com/ekakshgoyal/vriti" target="_blank">
-            <i class="fab fa-github"></i> GitHub Repository
-          </a>
-          <a href="https://www.youtube.com/watch?v=is62qJrXyjQ" target="_blank">
-            <i class="fas fa-play-circle"></i> Demo Video
-          </a>
+        <!-- Protein 2: Ag85B -->
+        <article class="protein-card">
+          <div class="img-wrap">
+            <img src="Images/vriti/ag85b_mycobacterium_transparent.png" alt="Ag85B Mycobacterium Tuberculosis Protein" />
+          </div>
+          <div class="badge-tag">MYCOBACTERIUM TUBERCULOSIS</div>
+          <h3 style="font-size: 22px; color: var(--text); font-weight: 500; margin-bottom: 8px;">Ag85B (Mycobacterium)</h3>
+          <p style="font-size: 13.5px; line-height: 1.6; color: var(--text-dim); flex: 1;">
+            Major 30-kDa mycolyltransferase secretory protein essential for mycobacterial cell wall biogenesis. Acts as a premier antigen candidate for next-generation tuberculosis subunit vaccines and diagnostic assays.
+          </p>
+          <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line-2); font-size: 11px; color: var(--accent);" class="mono">
+            MYCOLYLTRANSFERASE · ALPHA/BETA FOLD
+          </div>
+        </article>
+
+        <!-- Protein 3: 4-Oxalocrotonate Tautomerase -->
+        <article class="protein-card">
+          <div class="img-wrap">
+            <img src="Images/vriti/oxalo_tautomerase_transparent.png" alt="4-Oxalocrotonate Tautomerase Protein" />
+          </div>
+          <div class="badge-tag">ENZYMATIC CATALYSIS // BACTERIAL</div>
+          <h3 style="font-size: 22px; color: var(--text); font-weight: 500; margin-bottom: 8px;">4-Oxalocrotonate Tautomerase</h3>
+          <p style="font-size: 13.5px; line-height: 1.6; color: var(--text-dim); flex: 1;">
+            Hexameric tautomerase that catalyzes the keto-enol isomerization of unsaturated ketones in catechol degradation pathways, utilizing an invariant catalytic N-terminal proline residue.
+          </p>
+          <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line-2); font-size: 11px; color: var(--accent);" class="mono">
+            ISOMERIZATION ENZYME · PRO1 ACTIVE SITE
+          </div>
+        </article>
+
+        <!-- Protein 4: gp120 HIV-1 -->
+        <article class="protein-card">
+          <div class="img-wrap">
+            <img src="Images/vriti/gp120_hiv1_transparent.png" alt="gp120 Envelope Glycoprotein HIV-1" />
+          </div>
+          <div class="badge-tag">RETROVIRIDAE // HUMAN IMMUNODEFICIENCY VIRUS</div>
+          <h3 style="font-size: 22px; color: var(--text); font-weight: 500; margin-bottom: 8px;">The gp120 Glycoprotein (HIV-1)</h3>
+          <p style="font-size: 13.5px; line-height: 1.6; color: var(--text-dim); flex: 1;">
+            The 511-amino-acid-long surface envelope glycoprotein responsible for binding CD4 surface markers and coreceptors on human T-helper lymphocytes, driving viral entry and immune evasion.
+          </p>
+          <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line-2); font-size: 11px; color: var(--accent);" class="mono">
+            511 AMINO ACIDS · CD4 RECEPTOR BINDING
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: RECOGNITION & ACCOMPLISHMENTS -->
+    <section class="block" style="border-top: 1px solid var(--line); padding: 60px 0;">
+      <div class="block-head" style="margin-bottom: 30px;">
+        <div class="block-tag mono">04 / RECOGNITION</div>
+        <h2 class="block-title">National Stage &amp; <em>Hackathon Victories</em></h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+        <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 32px;">
+          <div style="font-size: 32px; color: #ffd060; margin-bottom: 14px;"><i class="fas fa-award"></i></div>
+          <h3 style="font-size: 22px; color: var(--text); margin-bottom: 10px;">National Representation · SIL Competition</h3>
+          <p style="font-size: 14.5px; line-height: 1.65; color: var(--text-dim);">
+            Selected through competitive multi-tier regional trials to represent Project Vriti at the <strong>National Level in the Student Innovation &amp; Leadership (SIL) Competition</strong>. Defended the computational framework before national jurors, emphasizing biological accuracy and quantum sorting scalability.
+          </p>
+        </div>
+        <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 32px;">
+          <div style="font-size: 32px; color: var(--accent); margin-bottom: 14px;"><i class="fas fa-trophy"></i></div>
+          <h3 style="font-size: 22px; color: var(--text); margin-bottom: 10px;">Interschool Hackathon Winner</h3>
+          <p style="font-size: 14.5px; line-height: 1.65; color: var(--text-dim);">
+            Awarded <strong>1st Place and top honors</strong> across multiple interschool AI and technology hackathons, recognized for applying breakthrough deep learning models to urgent global healthcare challenges.
+          </p>
         </div>
       </div>
+    </section>
+
+    <!-- SECTION 5: REFERENCES -->
+    <section class="block" style="border-top: 1px solid var(--line); padding: 60px 0;">
+      <div class="block-head" style="margin-bottom: 24px;">
+        <div class="block-tag mono">05 / BIBLIOGRAPHY</div>
+        <h2 class="block-title">Academic References</h2>
+      </div>
+      <ol style="margin-left: 20px; font-size: 14px; line-height: 1.8; color: var(--text-dim);">
+        <li style="margin-bottom: 10px;">
+          <strong>Jumper, J., et al. (2021).</strong> "Highly accurate protein structure prediction with AlphaFold." <em>Nature</em>, 596(7873), 583–589.
+        </li>
+        <li style="margin-bottom: 10px;">
+          <strong>Senior, A. W., et al. (2020).</strong> "Improved protein structure prediction using potentials from deep learning." <em>Nature</em>, 577(7792), 706–710.
+        </li>
+        <li>
+          <strong>Walls, A. C., et al. (2020).</strong> "Structure, function, and antigenicity of the SARS-CoV-2 spike glycoprotein." <em>Cell</em>, 181(2), 281–292.
+        </li>
+      </ol>
+    </section>
+
+    <!-- FOOTER CTA -->
+    <div style="text-align: center; padding: 60px 0 20px;">
+      <a href="index.html#work" class="btn btn-primary mono" style="padding: 16px 32px; font-size: 14px;">
+        <i class="fas fa-arrow-left" style="margin-right: 8px;"></i> BACK TO ALL PROJECTS
+      </a>
     </div>
+
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Ekaksh Goyal. All rights reserved.</p>
-      <p>Computer Science Enthusiast & Innovator</p>
-    </div>
+  <footer class="footer">
+    <span>© 2026 · EKAKSH GOYAL · PROJECT VRITI</span>
+    <span>BIO-AI &amp; QUANTUM COMPUTING</span>
+    <span>NOIDA, UP · INDIA</span>
   </footer>
 
-  <script src="../main.js"></script>
 </body>
 </html>
